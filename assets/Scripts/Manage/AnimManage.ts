@@ -28,6 +28,7 @@ export default class AnimManage extends cc.Component {
         })))
     }
     
+    
 
     /**
      * 节点缩放动画(有回弹)
