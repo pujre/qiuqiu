@@ -1,0 +1,24 @@
+{
+	"game": {
+		"name": "就是玩儿",
+		"appid": "602312994",
+		"cid": "13722"
+	},
+	"configs": [
+		{
+			"appid": "602312994",
+			"services": [
+				{
+					"service_id": "235",
+					"enable": true,
+					"params": {
+						"appid": "602312994",
+						"storeid": "oppo",
+						"plugin_version": "1.2.7_2.1.2"
+					}
+				}
+			]
+		}
+	],
+	"needExecNative": true
+}

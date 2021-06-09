@@ -1,0 +1,19 @@
+{
+  "package": "com.tyq.jswe.vivominigame",
+  "name": "就是玩儿",
+  "icon": "H:\\Project\\Cocos\\qiuqiu\\assets\\UI\\loading\\loading_01.png",
+  "versionName": "1.0.0",
+  "versionCode": "1",
+  "minPlatformVersion": "1040",
+  "deviceOrientation": "landscape",
+  "logLevel": "log",
+  "npmPath": "",
+  "tinyPackageMode": false,
+  "tinyPackageServer": "",
+  "useDebugKey": false,
+  "privatePath": "H:\\Project\\Cocos\\Pem-\\private.pem",
+  "certificatePath": "H:\\Project\\Cocos\\Pem-\\certificate.pem",
+  "disabledMode": "",
+  "showNpmPath": false,
+  "packFirstScreenRes": false
+}
