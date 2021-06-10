@@ -12,7 +12,7 @@
   "tinyPackageServer": "",
   "useDebugKey": false,
   "privatePath": "H:\\Project\\Cocos\\Pem-\\private.pem",
-  "certificatePath": "H:\\Project\\Cocos\\Pem-\\certificate.pem",
+  "certificatePath": "H:\\Project\\Cocos\\qiuqiu\\pem\\certificate.pem",
   "disabledMode": "",
   "showNpmPath": false,
   "packFirstScreenRes": false
