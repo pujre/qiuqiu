@@ -10,10 +10,10 @@
   "npmPath": "",
   "tinyPackageMode": false,
   "tinyPackageServer": "",
-  "useDebugKey": false,
+  "useDebugKey": true,
   "privatePath": "H:\\Project\\Cocos\\Pem-\\private.pem",
   "certificatePath": "H:\\Project\\Cocos\\qiuqiu\\pem\\certificate.pem",
-  "disabledMode": "",
+  "disabledMode": "disabled is-disabled",
   "showNpmPath": false,
   "packFirstScreenRes": false
 }
