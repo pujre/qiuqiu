@@ -287,8 +287,8 @@ class Network {
       //   if (token && typeof token != "undefined" && userId && typeof userId != "undefined") {
       //     console.log("TYQSDK", "注册成功", token, userId);
       //     self.mobileToken = token;
-      //     SdkTools.saveData("ServerUserId", userId);
-      //     callback(true);
+          SdkTools.saveData("ServerUserId", userId);
+          callback(true);
       //   }
       //   else {
       //     console.log("TYQSDK", "注册失败", token, userId);
@@ -517,7 +517,7 @@ class Network {
     //       return;
     //     }
     //     if (typeof json.data.mainSwitch != "undefined") {
-    //       let SW_MainSwitch = json.data.mainSwitch;           //广告总开关
+    //   let SW_MainSwitch = json.data.mainSwitch;           //广告总开关
     //       // 渠道管理-广告总开关
     //       if (!SW_MainSwitch) {
     //         console.log("TYQSDK", "广告开关没有开启");
@@ -656,17 +656,23 @@ class Network {
     //     }
 
 
-    //     // 创建广告
-    //     (adIdentity.adBannerId || SdkTools.getPlatform() == Game_Platform.GP_BL) && BannerController.getInstance().createSystemBanner();
-    //     adIdentity.adIntersId && IntersController.getInstance().createSystemInters();
-    //     adIdentity.adNativeId && NativeController.getInstance().createNativeAd();
-    //     (adIdentity.adVideoId || SdkTools.getPlatform() == Game_Platform.GP_BL) && VideoController.getInstance().createVideoAd();
-    //     adIdentity.adBoxId && BoxController.getInstance().createAppBox();
-    //     adIdentity.adBrickId && BlockController.getInstance().createBlock();
+        // 创建广告
+        //(adIdentity.adBannerId || SdkTools.getPlatform() == Game_Platform.GP_BL) && 
+        BannerController.getInstance().createSystemBanner();
+        //adIdentity.adIntersId && 
+        IntersController.getInstance().createSystemInters();
+        //adIdentity.adNativeId && 
+        NativeController.getInstance().createNativeAd();
+        ///(adIdentity.adVideoId || SdkTools.getPlatform() == Game_Platform.GP_BL) && 
+        VideoController.getInstance().createVideoAd();
+        //adIdentity.adBoxId && 
+        BoxController.getInstance().createAppBox();
+        //adIdentity.adBrickId && 
+        //BlockController.getInstance().createBlock();
 
 
-    //     IntersController.getInstance().runIntersInterval();
-    //     SdkTools.getInstance().initSystemInfo(callback);
+        IntersController.getInstance().runIntersInterval();
+        SdkTools.getInstance().initSystemInfo(callback);
     //   }
     // }
 
