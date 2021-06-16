@@ -188,11 +188,11 @@ class CocosUI {
     }
 
     var urlList = [
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIntersRes/layerBg.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIntersRes/nativeIntersBg.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIntersRes/touchButton.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIntersRes/nativeClose.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIntersRes/mask.png"
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/layerBg.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/Bg.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/touchButton.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/mask.png"
     ];
 
     var self = this;
@@ -232,10 +232,10 @@ class CocosUI {
     }
 
     var urlList = [
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeBannerRes/newNativeBanner.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/newNativeBanner.png",
       "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeBannerRes/nativeBannerButton.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeBannerRes/nativeBannerClose.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeBannerRes/nativeBannerTip.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ICONAd.png",
     ];
 
     var self = this;
@@ -270,8 +270,8 @@ class CocosUI {
     }
 
     var urlList = [
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIconRes/ICONAd.png",
-      "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeBannerRes/nativeBannerClose.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ICONAd.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
     ];
 
     var self = this;
@@ -308,8 +308,8 @@ class CocosUI {
     }
     var iconUIUrlList =
       [
-        "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NavigateIconRes/iconMask.png",
-        "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NavigateIconRes/iconBg.png",
+        "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/mask.png",
+        "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/iconBg.png",
         "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NavigateIconRes/morgametitle.png"
       ]
     SdkTools.loadImage(iconUIUrlList, (err, ArrImage) => {

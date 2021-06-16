@@ -378,7 +378,7 @@ export default class GamePanel extends cc.Component {
         let Overs:cc.Node=this.node.getChildByName('Overs');
         let Win:cc.Node=Overs.getChildByName('Win');
         let Lose:cc.Node=Overs.getChildByName('Lose');
-        this.reference1Btn.active=false;
+        //this.reference1Btn.active=false;
         AnalyticsManager.getInstance().raiseLevelEvent(isOn?EAnalyticsEvent.Success:EAnalyticsEvent.Fail,{level:this.NowLevelId.toString()});
         if(isOn){   
             AnalyticsManager.getInstance().raiseCustomEvent(EAnalyticsEvent.Start,{name:'单关通关时长',info:{levelId:this.NowLevelId,Time:10000-PureHelper.EventTimes('LevelsOStar')}});
@@ -387,7 +387,7 @@ export default class GamePanel extends cc.Component {
         if(isOn){
             Win.active=true;
             Lose.active=false;
-            this.scheduleOnce(()=>{this.reference1Btn.active=true;},1.5)
+            //this.scheduleOnce(()=>{this.reference1Btn.active=true;},1.5)
             Win.getChildByName('prompt_01').active=GameManage.getIns().HarvestKey>0?true:false;
             if(GameManage.getIns().HarvestKey>0){
                 Win.getChildByName('coin').position=cc.v2(-185,-200);
@@ -403,12 +403,12 @@ export default class GamePanel extends cc.Component {
             this.scheduleOnce(()=>{
                 if(this.LevelNode){
                     this.LevelNode.setParent(Win.getChildByName('bk'));
-                    this.LevelNode.position=cc.v2(18,-34);
-                    this.LevelNode.scale=0.5;
+                    this.LevelNode.position=cc.v2(15,0);
+                    this.LevelNode.scale=0.45;
                     this.LevelNode.getChildByName('LevelLabel').scale=2;
                     this.LevelNode.getChildByName('LevelLabel').position=cc.v2(0,380);
                     GameManage.getIns().Graphics.node.setParent(Win.getChildByName('bk'));
-                    GameManage.getIns().Graphics.node.scale=0.5;
+                    GameManage.getIns().Graphics.node.scale=0.45;
                     GameManage.getIns().Graphics.node.position=cc.v2(18,-34)
                 }
             },0.1)

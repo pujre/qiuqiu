@@ -16,7 +16,7 @@ class IntersController {
     /**
      * 系统插屏开关
      */
-    public SW_SystemIntersSwitch: boolean = true;
+    public SW_SystemIntersSwitch: boolean = false;
 
     /**
      * 原生插屏开关
@@ -31,7 +31,7 @@ class IntersController {
     /**
      * 原生插屏出现的概率
      */
-    public NUM_NativeIntersPercent: number = 0;
+    public NUM_NativeIntersPercent: number = 100;
 
     /**
      * 插屏间隔次数
@@ -47,12 +47,12 @@ class IntersController {
     /**
      * 插屏延迟时间(ms)
      */
-    public NUM_IntersDelayTime: number = 0;
+    public NUM_IntersDelayTime: number = 0.5;
 
     /**
      * 插屏延迟概率
      */
-    public NUM_IntersDelayPercent: number = 0;
+    public NUM_IntersDelayPercent: number = 45;
 
     /**
      * 插屏开始次数
