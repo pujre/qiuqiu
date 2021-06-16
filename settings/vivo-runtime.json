@@ -1,7 +1,7 @@
 {
   "package": "com.tyq.jswe.vivominigame",
   "name": "就是玩儿",
-  "icon": "H:\\Project\\Cocos\\qiuqiu\\assets\\UI\\loading\\loading_01.png",
+  "icon": "H:\\Project\\Cocos\\qiuqiu\\assets\\UI\\icon.png",
   "versionName": "1.0.1",
   "versionCode": "1.01",
   "minPlatformVersion": "1090",
