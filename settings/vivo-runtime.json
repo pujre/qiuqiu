@@ -4,7 +4,7 @@
   "icon": "E:\\CoCosProject\\qiuqiu\\assets\\UI\\loading\\loading_01.png",
   "versionName": "1.0.0",
   "versionCode": "1",
-  "minPlatformVersion": "1040",
+  "minPlatformVersion": "1090",
   "deviceOrientation": "landscape",
   "logLevel": "log",
   "npmPath": "",

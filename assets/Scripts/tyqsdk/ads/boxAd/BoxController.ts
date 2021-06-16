@@ -39,15 +39,18 @@ class BoxController {
      * 创建盒子广告
      */
     public createAppBox() {
-        if (SdkTools.getPlatform() == Game_Platform.GP_Oppo) {
-            NavigateController.getInstance().createNavigateBoxPortal(this.ID_BoxID);
-            return;
-        }
 
         if (!this.SW_BoxSwitch) {
             console.log("TYQSDK", "QQ 盒子广告开关未开启");
             return;
         }
+        
+        if (SdkTools.getPlatform() == Game_Platform.GP_Oppo) {
+            NavigateController.getInstance().createNavigateBoxPortal(this.ID_BoxID);
+            return;
+        }
+
+       
 
         if (!SdkTools.getInstance().isversionNewThanEngineVersion("1.7.1")) {
             console.log("TYQSDK", "QQ 平台版本过低,不能创建盒子广告");
