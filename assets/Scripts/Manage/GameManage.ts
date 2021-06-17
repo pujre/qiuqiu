@@ -62,7 +62,7 @@ export default class GameManage extends cc.Component {
             DataManage.getIns().SetItemData('UefOneDataKey',1);
 
             DataManage.getIns().SetItemData(DataKey.Level,1); //玩家默认等级为1
-            DataManage.getIns().SetItemData(DataKey.Coin,10000);//默认金币为10
+            DataManage.getIns().SetItemData(DataKey.Coin,10);//默认金币为10
             DataManage.getIns().SetSkill(0,0,true);//默认皮肤
             DataManage.getIns().SetSkill(9,1,true);//默认皮肤
             DataManage.getIns().SetItemData(DataKey.SigininNumber,0);  /**累计登录天数 */

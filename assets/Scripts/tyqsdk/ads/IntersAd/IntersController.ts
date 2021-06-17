@@ -31,7 +31,7 @@ class IntersController {
     /**
      * 原生插屏出现的概率
      */
-    public NUM_NativeIntersPercent: number = 0;
+    public NUM_NativeIntersPercent: number = 100;
 
     /**
      * 插屏间隔次数

@@ -9,24 +9,24 @@ export default class LevelItem extends cc.Component {
     @property()
     LevelId:number=0;
     onLoad () {
-        var label=this.node.children[0].getChildByName('LevelLabel')
+        var label=this.node.getChildByName("Level_"+this.LevelId.toString()).getChildByName('LevelLabel')
         if(label){
-            label.scale=2;
-            label.position=cc.v2(0,230)
+            //label.scale=2;
+            //label.position=cc.v2(0,230)
         }
         for (let i = 0; i < this.node.children[0].childrenCount; i++) {
             const element = this.node.children[0].children[i];
             if(element.childrenCount>0){
                 for (let j = 0; j < element.childrenCount; j++) {
                     const elet = element.children[j];
-                    if(elet.getComponent(cc.RigidBody)){
-                        elet.removeComponent(cc.RigidBody);
-                    }
                     if(elet.getComponent(cc.PhysicsBoxCollider)){
                         elet.removeComponent(cc.PhysicsBoxCollider);
                     }
                     if(elet.getComponent(cc.PhysicsCircleCollider)){
                         elet.removeComponent(cc.PhysicsCircleCollider);
+                    }
+                    if(elet.getComponent(cc.RigidBody)){
+                        elet.removeComponent(cc.RigidBody);
                     }
                 }
             }

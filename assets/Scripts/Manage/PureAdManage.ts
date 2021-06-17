@@ -93,7 +93,6 @@ export default class PureAdManage extends cc.Component {
         }else{
             UIManage.getIns().ShowTip('暂无广告')
         }
-        if(callback)callback();
     }
 
     //展示插屏

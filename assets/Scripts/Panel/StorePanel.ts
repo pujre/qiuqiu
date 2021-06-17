@@ -60,7 +60,7 @@ export default class StorePanel extends cc.Component {
             case 'Close':
                 this.node.active=false;
                 PureAdManage.getIns().ShowBanner();
-                this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },PureHelper.Range(1,5)*0.1)
+                this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },1)
         
                 if(UIManage.GetGamePanel().LevelNode){
                     UIManage.GetGamePanel().LevelNode.getComponent(LevelMode).TranformSkill();
