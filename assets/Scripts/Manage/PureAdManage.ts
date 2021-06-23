@@ -30,7 +30,12 @@ export default class PureAdManage extends cc.Component {
                 }
             }
         })
+        this.ADicon()
         this.InterAndDeskTop();
+    }
+
+    ADicon(){
+        TYQAd.getInstance().showNativeIcon(100,100,60,cc.winSize.height-(cc.winSize.height/3));
     }
 
     ShowBanner(){
