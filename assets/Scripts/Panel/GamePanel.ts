@@ -39,7 +39,6 @@ export default class GamePanel extends cc.Component {
     @property(cc.Node)
     key_1:cc.Node=null;
 
-    Ad:any=null;
 
     onLoad () {
         var Btns: cc.Button[] = this.node.getComponentsInChildren(cc.Button);
@@ -184,6 +183,7 @@ export default class GamePanel extends cc.Component {
             case 'playAgain'://重玩当前关卡
                 this.node.getChildByName('Overs').active=false;
                 this.LoadLevel(this.NowLevelId);
+                //this.scheduleOnce(()=>{PureAdManage.getIns().ShowInters();},1)
                 break;
             case 'reference1':
             case 'nextLevel'://下一关
@@ -191,6 +191,7 @@ export default class GamePanel extends cc.Component {
                 break;
             case'Sigin':
                 UIManage.GetSiginPanel().node.active=true;
+                this.scheduleOnce(()=>{PureAdManage.getIns().ShowInters();},1)
                 break;
             case 'Transform':
             case 'Skill':
@@ -251,31 +252,22 @@ export default class GamePanel extends cc.Component {
                 this.LoadLevel(this.NowLevelId);
                 break;
             case 'KeyBtn':
-                this.ShowAdPanel(1,()=>{
-                    PureAdManage.getIns().ShowVideo(()=>{
-                        this.node.getChildByName('ADPanel').active=false;
-                        DataManage.getIns().SetProp(1,3);
-                        UIManage.getIns().ShowTip('获得3枚钥匙')
-                    })
-                });
-                
+                this.node.getChildByName('ADPanel').active=true;
+                this.node.getChildByName('ADPanel').getChildByName('prompt_01').active=true;
+                this.node.getChildByName('ADPanel').getChildByName('label').getComponent(cc.Label).string='是否观看视频跳过此关。';
                 break;
             case 'AD':
-                PureAdManage.getIns().ShowVideo(()=>{
-                    if(this.Ad)this.Ad();
+                PureAdManage.getIns().ShowVideo(() => {
+                    console.log("播放广告成功");
+                    this.node.getChildByName('ADPanel').active = false;
+                    DataManage.getIns().SetProp(1, 3);
+                    UIManage.getIns().ShowTip('获得3枚钥匙')
                 })
                 break;
             case 'Close':
                 this.node.getChildByName('ADPanel').active=false;
                 break;
         }
-    }
-
-    ShowAdPanel(type:number,any:any){
-        this.node.getChildByName('ADPanel').active=true;
-        this.node.getChildByName('ADPanel').getChildByName('prompt_01').active=type==1?true:false;
-        this.node.getChildByName('ADPanel').getChildByName('label').getComponent(cc.Label).string=type==1?'':'是否观看视频跳过此关。';
-        this.Ad=any;
     }
 
     Nextlevel(){
@@ -372,7 +364,7 @@ export default class GamePanel extends cc.Component {
     GameOver(isOn:boolean){
         EventCenter.getInst().fire(EventHead.GameOver);
         if(this.NowLevelId!=1){
-            this.scheduleOnce(function(){ PureAdManage.getIns().ShowInters(); },PureHelper.Range(1,5)*0.1)  
+            this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },1)  
         }
         
         let Overs:cc.Node=this.node.getChildByName('Overs');
@@ -389,10 +381,11 @@ export default class GamePanel extends cc.Component {
             Lose.active=false;
             //this.scheduleOnce(()=>{this.reference1Btn.active=true;},1.5)
             Win.getChildByName('prompt_01').active=GameManage.getIns().HarvestKey>0?true:false;
+            Win.getChildByName('coin').active=true;
             if(GameManage.getIns().HarvestKey>0){
-                Win.getChildByName('coin').position=cc.v2(-185,-200);
+                Win.getChildByName('coin').position=cc.v2(-90,-200);
             }else{
-                Win.getChildByName('coin').position=cc.v2(0,-200);
+                Win.getChildByName('coin').position=cc.v2(-20,-200);
             }
             DataManage.getIns().SetCoin(50);
             DataManage.getIns().SetLevelLock(this.NowLevelId<20?this.NowLevelId+1:1)
