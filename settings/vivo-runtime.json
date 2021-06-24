@@ -4,7 +4,7 @@
   "icon": "H:\\Project\\Cocos\\qiuqiu\\assets\\UI\\icon.png",
   "versionName": "1.0.2",
   "versionCode": "1",
-  "minPlatformVersion": "1090",
+  "minPlatformVersion": "1085",
   "deviceOrientation": "landscape",
   "logLevel": "log",
   "npmPath": "",

@@ -397,12 +397,12 @@ export default class GamePanel extends cc.Component {
             this.scheduleOnce(()=>{
                 if(this.LevelNode){
                     this.LevelNode.setParent(Win.getChildByName('bk'));
-                    this.LevelNode.position=cc.v2(18,-34);
-                    this.LevelNode.scale=0.5;
+                    this.LevelNode.position=cc.v2(15,0);
+                    this.LevelNode.scale=0.45;
                     this.LevelNode.getChildByName('LevelLabel').scale=2;
                     this.LevelNode.getChildByName('LevelLabel').position=cc.v2(0,380);
                     GameManage.getIns().Graphics.node.setParent(Win.getChildByName('bk'));
-                    GameManage.getIns().Graphics.node.scale=0.5;
+                    GameManage.getIns().Graphics.node.scale=0.45;
                     GameManage.getIns().Graphics.node.position=cc.v2(18,-34)
                 }
             },0.1)
