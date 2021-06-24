@@ -162,6 +162,10 @@ export default class GamePanel extends cc.Component {
                 this.Nextlevel();
             })
                 break;
+
+            case 'rigihtAD':
+                
+                break;
             case 'Music':
                 AudioManager.setEffectVolume(AudioManager.getEffectVolume()==1?0:1);
                 if(AudioManager.getEffectVolume()==1){

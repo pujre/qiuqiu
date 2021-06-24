@@ -184,7 +184,8 @@ class CocosUI {
       bg: null,
       button: null,
       exit: null,
-      mask: null
+      mask: null,
+      ad:null
     }
 
     var urlList = [
@@ -192,7 +193,8 @@ class CocosUI {
       "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/Bg.png",
       "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/touchButton.png",
       "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
-      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/mask.png"
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/mask.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/image/NativeAdTip.png"
     ];
 
     var self = this;
@@ -211,6 +213,7 @@ class CocosUI {
         self.NIUIInfo.button = ArrImage[2];
         self.NIUIInfo.exit = ArrImage[3];
         self.NIUIInfo.mask = ArrImage[4];
+        self.NIUIInfo.ad=ArrImage[5];
         self.isLoadNIUI = true;
         console.log("TYQSDK", "原生插屏资源加载成功");
       }
@@ -513,6 +516,22 @@ class CocosUI {
       if (this.cocosGroup != '') {
         bg.group = this.cocosGroup;
       }
+
+      //ad标识
+      var ad = new cc.Node("ad");
+      ad.addComponent(cc.Sprite);
+      ad.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(this.NIUIInfo.ad);
+
+      setTimeout(() => {
+        // ad.width = bg.width - 200;
+        // ad.height = button.width * 0.382;
+
+        ad.x = bg.x;
+        ad.y = bg.y - bg.height / 2 - button.height / 2 - 30;
+        ad.zIndex = 30010;
+      }, 1);
+
+      scene.addChild(ad);
 
       var button = new cc.Node("button");
       button.addComponent(cc.Sprite);
