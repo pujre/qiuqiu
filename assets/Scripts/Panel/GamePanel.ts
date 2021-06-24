@@ -162,9 +162,11 @@ export default class GamePanel extends cc.Component {
                 this.Nextlevel();
             })
                 break;
-
             case 'rigihtAD':
-                
+                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                break;
+            case 'LookAD':
+                console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'Music':
                 AudioManager.setEffectVolume(AudioManager.getEffectVolume()==1?0:1);
@@ -386,11 +388,6 @@ export default class GamePanel extends cc.Component {
             //this.scheduleOnce(()=>{this.reference1Btn.active=true;},1.5)
             Win.getChildByName('prompt_01').active=GameManage.getIns().HarvestKey>0?true:false;
             Win.getChildByName('coin').active=true;
-            if(GameManage.getIns().HarvestKey>0){
-                Win.getChildByName('coin').position=cc.v2(-90,-200);
-            }else{
-                Win.getChildByName('coin').position=cc.v2(-20,-200);
-            }
             DataManage.getIns().SetCoin(50);
             DataManage.getIns().SetLevelLock(this.NowLevelId<20?this.NowLevelId+1:1)
             var Rigis: cc.RigidBody[] = this.LevelNode.getComponentsInChildren(cc.RigidBody);

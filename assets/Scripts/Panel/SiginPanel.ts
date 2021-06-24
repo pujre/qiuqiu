@@ -91,7 +91,8 @@ export default class SiginPanel extends cc.Component {
                     });
                 }
                 break;
-            case '':
+            case 'LookAD':
+                console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case '':
                 break;

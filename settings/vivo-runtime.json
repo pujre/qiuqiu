@@ -2,7 +2,7 @@
   "package": "com.tyq.jswe.vivominigame",
   "name": "就是玩儿",
   "icon": "H:\\Project\\Cocos\\qiuqiu\\assets\\UI\\icon.png",
-  "versionName": "1.0.1",
+  "versionName": "1.0.2",
   "versionCode": "1",
   "minPlatformVersion": "1090",
   "deviceOrientation": "landscape",

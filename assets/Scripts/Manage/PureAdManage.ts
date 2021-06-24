@@ -30,7 +30,7 @@ export default class PureAdManage extends cc.Component {
                 }
             }
         })
-        this.ADicon()
+        //this.ADicon()
         this.InterAndDeskTop();
     }
 

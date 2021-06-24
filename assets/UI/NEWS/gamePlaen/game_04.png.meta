@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "f878b2fa-6cd4-4fe5-91ca-c06c5dd2e376",
+  "uuid": "7eb2ecb6-6463-4288-b77e-0b3e88fa8e2f",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,10 +9,10 @@
   "packable": true,
   "platformSettings": {},
   "subMetas": {
-    "icon": {
+    "game_04": {
       "ver": "1.0.4",
-      "uuid": "126a5cb0-6140-4dd8-995a-0d1b2ff0eda9",
-      "rawTextureUuid": "f878b2fa-6cd4-4fe5-91ca-c06c5dd2e376",
+      "uuid": "96f95d70-f20e-4c75-b533-970824e0cafe",
+      "rawTextureUuid": "7eb2ecb6-6463-4288-b77e-0b3e88fa8e2f",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -20,10 +20,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 256,
-      "height": 256,
-      "rawWidth": 256,
-      "rawHeight": 256,
+      "width": 168,
+      "height": 66,
+      "rawWidth": 168,
+      "rawHeight": 66,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
