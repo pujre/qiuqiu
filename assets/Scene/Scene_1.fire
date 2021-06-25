@@ -600,7 +600,7 @@
       "array": [
         0,
         0,
-        688.4901733398438,
+        469.3857727050781,
         0,
         0,
         0,
@@ -59960,7 +59960,7 @@
         "__id__": 1494
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 1496
@@ -64450,7 +64450,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Skill copy",
+    "_name": "LookAD",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1575
@@ -64460,7 +64460,7 @@
         "__id__": 1577
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 1579
@@ -64560,7 +64560,7 @@
         1,
         1,
         1,
-        0
+        1
       ]
     },
     "_eulerAngles": {
@@ -68247,7 +68247,7 @@
         "__id__": 1648
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 1652
@@ -70643,7 +70643,7 @@
         "__id__": 1698
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 1702
