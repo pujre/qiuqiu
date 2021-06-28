@@ -273,8 +273,8 @@ class CocosUI {
     }
 
     var urlList = [
-      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ICONAd.png",
-      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ad.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/IconClose.png",
     ];
 
     var self = this;
@@ -906,7 +906,7 @@ class CocosUI {
     setTimeout(() => {
       ICONTip.width = width / 3;
       ICONTip.height = ICONTip.width / 70 * 34;
-      ICONTip.x = width / 2 - ICONTip.width / 2;
+      ICONTip.x = width / 2 + ICONTip.width / 2;
       ICONTip.y = height / 2 - ICONTip.height / 2;
     }, 1);
     this.nativeIcon.addChild(ICONTip);
@@ -917,7 +917,7 @@ class CocosUI {
     setTimeout(() => {
       ICONClose.width = 45;
       ICONClose.height = 45;
-      ICONClose.x = -this.nativeIcon.width / 2 + ICONClose.width / 2;
+      ICONClose.x = -this.nativeIcon.width / 2 - ICONClose.width / 2;
       ICONClose.y = this.nativeIcon.height / 2 - ICONClose.width / 2;
     }, 1);
     this.nativeIcon.addChild(ICONClose);

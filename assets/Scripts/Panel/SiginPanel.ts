@@ -92,7 +92,8 @@ export default class SiginPanel extends cc.Component {
                 }
                 break;
             case 'LookAD':
-                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                //console.log("点击查看原生广告按钮，待加入查看原生广告");
+                PureAdManage.getIns().ShowInters();
                 break;
             case '':
                 break;

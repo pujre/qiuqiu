@@ -59960,7 +59960,7 @@
         "__id__": 1494
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1496
@@ -64460,7 +64460,7 @@
         "__id__": 1577
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1579
@@ -64560,7 +64560,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "_eulerAngles": {
@@ -67940,7 +67940,7 @@
       "__type__": "TypedArray",
       "ctor": "Float32Array",
       "array": [
-        -291.3890075683594,
+        20.20800018310547,
         -199.4949951171875,
         0,
         0,
@@ -68247,7 +68247,7 @@
         "__id__": 1648
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1652
@@ -68276,7 +68276,7 @@
       "__type__": "TypedArray",
       "ctor": "Float32Array",
       "array": [
-        0,
+        -290,
         -204.1219940185547,
         0,
         0,
@@ -70643,7 +70643,7 @@
         "__id__": 1698
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1702

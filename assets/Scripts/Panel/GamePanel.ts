@@ -163,10 +163,12 @@ export default class GamePanel extends cc.Component {
             })
                 break;
             case 'rigihtAD':
-                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                PureAdManage.getIns().ShowInters();
+                //console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'LookAD':
-                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                PureAdManage.getIns().ShowInters();
+                //console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'Music':
                 AudioManager.setEffectVolume(AudioManager.getEffectVolume()==1?0:1);

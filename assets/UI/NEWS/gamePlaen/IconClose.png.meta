@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "5612a882-e68d-4931-ad27-3b77be8e1b6d",
+  "uuid": "65afe9d2-7e07-4afb-ae8c-d1cdc281ca9a",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,10 +9,10 @@
   "packable": true,
   "platformSettings": {},
   "subMetas": {
-    "closee  2": {
+    "IconClose": {
       "ver": "1.0.4",
-      "uuid": "e72e0528-add3-4653-945d-e8a7d89b6403",
-      "rawTextureUuid": "5612a882-e68d-4931-ad27-3b77be8e1b6d",
+      "uuid": "3b048eba-f5fb-4bd8-a3c4-b8eab28cbfb3",
+      "rawTextureUuid": "65afe9d2-7e07-4afb-ae8c-d1cdc281ca9a",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
