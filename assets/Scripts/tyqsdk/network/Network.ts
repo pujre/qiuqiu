@@ -668,7 +668,7 @@ class Network {
         //adIdentity.adBoxId && 
         BoxController.getInstance().createAppBox();
         //adIdentity.adBrickId && 
-        //BlockController.getInstance().createBlock();
+        BlockController.getInstance().createBlock();
 
 
         IntersController.getInstance().runIntersInterval();

@@ -19,7 +19,8 @@ class VideoController {
     /**
      * 系统视频广告ID
      */
-    public ID_VideoID = "7c460fa6046545b6a32b219b3126572e";
+    //public ID_VideoID = "7c460fa6046545b6a32b219b3126572e";//vivo
+    public ID_VideoID = "1eece0677401c146c4af18d9764f296f";//qq
 
     /**
      * 视频开关
@@ -49,13 +50,13 @@ class VideoController {
                 VideoOppo.getInstance().createVideoAd(this.ID_VideoID);
                 break;
             case Game_Platform.GP_Vivo:
-                VideoVivo.getInstance().createVideoAd(this.ID_VideoID);
+                VideoVivo.getInstance().createVideoAd("7c460fa6046545b6a32b219b3126572e");
                 break;
             case Game_Platform.GP_Tiktok:
                 VideoTiktok.getInstance().createVideoAd(this.ID_VideoID);
                 break;
             case Game_Platform.GP_QQ:
-                VideoQQ.getInstance().createVideoAd(this.ID_VideoID);
+                VideoQQ.getInstance().createVideoAd("1eece0677401c146c4af18d9764f296f");
                 break;
             case Game_Platform.GP_WX:
                 VideoWX.getInstance().createVideoAd(this.ID_VideoID);

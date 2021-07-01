@@ -11,6 +11,8 @@ class BannerTiktok {
      */
     public bannerAd: any = null;
 
+    private ID_BannerId;
+
     /**
      * Tiktok的系统广告正在展示中
      */
@@ -44,7 +46,7 @@ class BannerTiktok {
             console.log("TYQSDK", "Tiktok bannerId为空");
             return;
         }
-
+        this.ID_BannerId=BannerId;
         console.log('TYQSDK', 'Tiktok Banner广告初始化', BannerId);
 
         let windowWidth = tt.getSystemInfoSync().windowWidth;
@@ -108,7 +110,7 @@ class BannerTiktok {
             setInterval(() => {
                 console.log("TYQSDK", 'Tiktok 刷新系统banner========================')
                 this.bannerAd.destroy();
-                this.createSystemBanner(BannerController.getInstance().ID_BannerId);
+                this.createSystemBanner(this.ID_BannerId);
             }, BannerController.getInstance().NUM_BannerUpdateTime * 1000)
     }
 

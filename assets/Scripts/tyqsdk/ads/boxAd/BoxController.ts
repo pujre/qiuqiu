@@ -7,12 +7,12 @@ class BoxController {
     /**
      * 盒子广告ID
      */
-    public ID_BoxID = "";
+    public ID_BoxID = "b55b572b26bf93d1f4ae5ca138a36947";
 
     /**
      * 盒子广告开关
      */
-    public SW_BoxSwitch: boolean = false;
+    public SW_BoxSwitch: boolean = true;
 
     /**
      * 盒子广告对象

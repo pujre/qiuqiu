@@ -4,6 +4,7 @@ class BannerWX {
 
     private static instance: BannerWX
 
+    private ID_BannerId;
     /**
      * banner广告对象
      */
@@ -36,6 +37,7 @@ class BannerWX {
 
         console.log("TYQSDK", "WX 系统banner广告初始化", ID);
 
+        this.ID_BannerId=ID;
         var windowWidth = Number(wx.getSystemInfoSync().windowWidth);
         var windowHeight = Number(wx.getSystemInfoSync().windowHeight);
 
@@ -82,7 +84,7 @@ class BannerWX {
         this.bannerAd.onError(function (err) {
             console.log("TYQSDK", "WX banner加载失败" + JSON.stringify(err));
             setTimeout(() => {
-                self.createSystemBanner(BannerController.getInstance().ID_BannerId);
+                self.createSystemBanner(this.ID_BannerId);
             }, 10 * 1000);
         })
 
@@ -115,7 +117,7 @@ class BannerWX {
                 this.bannerAd.offLoad();
                 this.bannerAd.offError();
                 this.bannerAd.destroy();
-                this.createSystemBanner(BannerController.getInstance().ID_BannerId);
+                this.createSystemBanner(this.ID_BannerId);
             }, BannerController.getInstance().NUM_BannerUpdateTime * 1000)
     }
 

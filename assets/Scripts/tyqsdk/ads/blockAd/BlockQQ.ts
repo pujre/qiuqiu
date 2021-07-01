@@ -6,7 +6,7 @@ class BlockQQ {
     /**
      * 积木广告ID
      */
-    public ID_BlockID = "";
+    public ID_BlockID = "dba606f3b6674da06c26d0b1686605fe";
 
     /**
      * 积木广告对象
