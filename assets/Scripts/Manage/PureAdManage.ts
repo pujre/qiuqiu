@@ -23,6 +23,7 @@ export default class PureAdManage extends cc.Component {
 
     onLoad () {
         PureAdManage.instance=this;
+        
     }
 
 

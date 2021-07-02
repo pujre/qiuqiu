@@ -78,7 +78,6 @@ export default class CocosAnalyticsPack extends AnalyticsParent{
         if(event == EAnalyticsEvent.Start){
             cocosAnalytics.CALevels.begin({
                 level: id,
-                reason: param.reason
             })
         }
         else if (event == EAnalyticsEvent.Success) {
@@ -88,7 +87,8 @@ export default class CocosAnalyticsPack extends AnalyticsParent{
         }
         else if (event == EAnalyticsEvent.Fail) {
             cocosAnalytics.CALevels.failed({
-                level: id
+                level: id,
+                reason: param.reason
             })
         }
     }

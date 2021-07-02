@@ -2,6 +2,6 @@
   "appid": "1111894311",
   "orientation": "landscape",
   "separate_engine": false,
-  "REMOTE_SERVER_ROOT": "",
+  "REMOTE_SERVER_ROOT": "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/Game/jswr/",
   "subContext": ""
 }

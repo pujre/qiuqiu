@@ -1,7 +1,7 @@
 import DataManage from "./DataManage";
 import EventCenter from "./EventCenter";
 import { DataKey, EventHead } from "../Game/DataKey";
-import AnalyticsManager, { EAnalyticsSDKType } from "../ThirdPlugin/Manager/AnalyticsManager";
+import AnalyticsManager, { EAnalyticsEvent, EAnalyticsSDKType } from "../ThirdPlugin/Manager/AnalyticsManager";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -72,8 +72,8 @@ export default class GameManage extends cc.Component {
     }
 
     start() {
-        //AnalyticsManager.getInstance().login(EAnalyticsEvent.Start);
-        //AnalyticsManager.getInstance().login(EAnalyticsEvent.Success);
+        AnalyticsManager.getInstance().login(EAnalyticsEvent.Start);
+        AnalyticsManager.getInstance().login(EAnalyticsEvent.Success);
     }
 
     /**

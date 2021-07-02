@@ -63,35 +63,35 @@ export default class AnalyticsManager{
     }
 
     init(_type : EAnalyticsSDKType){
-        // this.type = _type;
+        this.type = _type;
         
-        // switch(this.type){
-        //     case EAnalyticsSDKType.CoCos:
-        //         this.analyticsPack = new CocosAnalyticsPack();
-        //     break;
-        //     default: cc.error("not find analytics");
-        //     return;
-        // }
+        switch(this.type){
+            case EAnalyticsSDKType.CoCos:
+                this.analyticsPack = new CocosAnalyticsPack();
+            break;
+            default: cc.error("not find analytics");
+            return;
+        }
 
-        // let channel = this.channelType[cc.sys.platform];
-        // channel = channel ? channel: "unknow";
+        let channel = this.channelType[cc.sys.platform];
+        channel = channel ? channel: "unknow";
 
-        // this.analyticsPack.enableDebug(this.enableDebug);
-        // this.analyticsPack.init({channel,userId:this.userId});
+        this.analyticsPack.enableDebug(this.enableDebug);
+        this.analyticsPack.init({channel,userId:this.userId});
     }
 
     login(event: EAnalyticsEvent , param ?: any){
-        //this.analyticsPack.login( event , param);
+        this.analyticsPack.login( event , param);
     }
 
     /** 自定义事件 */
     raiseCustomEvent(event: EAnalyticsEvent , param: IAnalyticsCustomParams){
-        //this.analyticsPack.raiseEvent(EAnalyticsEventType.Custom , event , param.name , param);
+        this.analyticsPack.raiseEvent(EAnalyticsEventType.Custom , event , param.name , param);
     }
 
     /** 关卡事件 */
     raiseLevelEvent(event: EAnalyticsEvent , param: IAnalyticsLevelParams){
-        //this.analyticsPack.raiseEvent(EAnalyticsEventType.Level , event , param.level , param);
+        this.analyticsPack.raiseEvent(EAnalyticsEventType.Level , event , param.level , param);
     }
 
     private _getUserId(){
