@@ -18,7 +18,7 @@ class sdkConfig {
     }
 
     // 渠道ID "0"为测试版(安卓和IOS没有测试)  "1234666"为安卓  "1234888"为IOS
-    public channelId: string = "123410889";
+    public channelId: string = '123415589';//"123410889";
 
 }
 

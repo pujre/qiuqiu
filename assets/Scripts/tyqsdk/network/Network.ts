@@ -460,7 +460,7 @@ class Network {
     //     if (token && typeof token != "undefined" && userId && typeof userId != "undefined") {
     //       self.mobileToken = token;
     //       SdkTools.saveData("ServerUserId", userId);
-    //       callback(true);
+           callback(true);
     //     }
     //     else {
     //       console.log("TYQSDK", "注册失败");
@@ -775,7 +775,7 @@ class Network {
 
     //       self.isInitCompelete++;
     //       if (callback && self.isInitCompelete == 2) {
-    //         callback(true);
+             callback(true);
     //       }
     //     }
     //   };

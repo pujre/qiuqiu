@@ -16,7 +16,7 @@ class IntersController {
     /**
      * 系统插屏开关
      */
-    public SW_SystemIntersSwitch: boolean = false;
+    public SW_SystemIntersSwitch: boolean = true;
 
     /**
      * 原生插屏开关
