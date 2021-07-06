@@ -66,7 +66,7 @@ export default class GameManage extends cc.Component {
             DataManage.getIns().SetSkill(0,0,true);//默认皮肤
             DataManage.getIns().SetSkill(9,1,true);//默认皮肤
             DataManage.getIns().SetItemData(DataKey.SigininNumber,0);  /**累计登录天数 */
-            DataManage.getIns().SetProp(1,100); /**游戏道具 */
+            DataManage.getIns().SetProp(1,1); /**游戏道具 */
             DataManage.getIns().SetItemData(DataKey.UnLockLevel+'1',1);//默认解锁第一关
         }
     }

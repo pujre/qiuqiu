@@ -40,6 +40,8 @@ export default class GamePanel extends cc.Component {
     @property(cc.Node)
     key_1:cc.Node=null;
 
+    dit:cc.Node;
+
 
     onLoad () {
         var Btns: cc.Button[] = this.node.getComponentsInChildren(cc.Button);
@@ -66,6 +68,18 @@ export default class GamePanel extends cc.Component {
             }
             if(Btns[i].node.name=='reference1'){
                 this.reference1Btn=Btns[i].node;
+            }
+            if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()!=Game_Platform.GP_Vivo){
+                Btns[i].node.active=false;
+            }
+            if(Btns[i].node.name=='Dit'){
+                this.dit=Btns[i].node;
+                if(DataManage.getIns().GetItemData("isDit")!=null){
+                    this.dit.active=false;
+                }
+            }
+            if(Btns[i].node.name=='Dit'&&SdkTools.getPlatform()!=Game_Platform.GP_Vivo){
+                Btns[i].node.active=false;
             }
         }
 
@@ -164,11 +178,13 @@ export default class GamePanel extends cc.Component {
             })
                 break;
             case 'rigihtAD':
-                PureAdManage.getIns().ShowInters();
+                //PureAdManage.getIns().ShowInters();
+                PureAdManage.getIns().ShowPrimeval();
                 //console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'LookAD':
-                PureAdManage.getIns().ShowInters();
+                //PureAdManage.getIns().ShowInters();
+                PureAdManage.getIns().ShowPrimeval();
                 //console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'Music':
@@ -197,6 +213,14 @@ export default class GamePanel extends cc.Component {
             case 'reference1':
             case 'nextLevel'://下一关
                 this.Nextlevel();
+                break;
+            case 'Dit':
+                PureAdManage.getIns().showDit((isOn)=>{
+                    if(isOn){
+                        this.dit.active=false;
+                        DataManage.getIns().SetItemData("isDit",1);
+                    }
+                });
                 break;
             case'Sigin':
                 UIManage.GetSiginPanel().node.active=true;

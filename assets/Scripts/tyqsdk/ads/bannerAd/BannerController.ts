@@ -20,7 +20,7 @@ class BannerController {
      * 系统BannerId
      */
     //public ID_BannerId = "2cc6af26a2fb4fe7ab40f81ed346d3de";//vivo
-    public ID_BannerId = "6325d6b238612d5f5a3a0be7bcaef199";//qq
+    //public ID_BannerId = "6325d6b238612d5f5a3a0be7bcaef199";//qq
     /**
      * 系统Banner开关
      */
@@ -107,21 +107,21 @@ class BannerController {
         }
         switch (SdkTools.getPlatform()) {
             case Game_Platform.GP_Oppo:
-                BannerOppo.getInstance().createSystemBanner(this.ID_BannerId);
+                //BannerOppo.getInstance().createSystemBanner(this.ID_BannerId);
                 break;
             case Game_Platform.GP_Vivo:
                 //BannerVivo.getInstance().createSystemBanner(this.ID_BannerId);
                 BannerVivo.getInstance().createSystemBanner("2cc6af26a2fb4fe7ab40f81ed346d3de");
                 break;
             case Game_Platform.GP_Tiktok:
-                BannerTiktok.getInstance().createSystemBanner(this.ID_BannerId);
+                //BannerTiktok.getInstance().createSystemBanner(this.ID_BannerId);
                 break;
             case Game_Platform.GP_QQ:
                 //BannerQQ.getInstance().createSystemBanner(this.ID_BannerId);
                 BannerQQ.getInstance().createSystemBanner("6325d6b238612d5f5a3a0be7bcaef199");
                 break;
             case Game_Platform.GP_WX:
-                BannerWX.getInstance().createSystemBanner(this.ID_BannerId);
+                //BannerWX.getInstance().createSystemBanner(this.ID_BannerId);
                 break;
             case Game_Platform.GP_BL:
                 BannerBL.getInstance().createSystemBanner();

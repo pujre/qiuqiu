@@ -12,7 +12,7 @@ class IntersController {
     private static instance: IntersController
 
     //public ID_SystemIntersId: string = "e5076b3c3ec545408107620aefb95777";//vivo    //系统插屏ID
-    public ID_SystemIntersId: string = "2e5fd341a0e5d7676a00cb82794a6d2c";//qq
+    //public ID_SystemIntersId: string = "2e5fd341a0e5d7676a00cb82794a6d2c";//qq
     /**
      * 系统插屏开关
      */
@@ -147,7 +147,7 @@ class IntersController {
                 IntersVivo.getInstance().createSystemInters("e5076b3c3ec545408107620aefb95777");
                 break;
             case Game_Platform.GP_Tiktok:
-                IntersTiktok.getInstance().createSystemInters(this.ID_SystemIntersId);
+                //IntersTiktok.getInstance().createSystemInters(this.ID_SystemIntersId);
                 break;
             case Game_Platform.GP_QQ:
                 //IntersQQ.getInstance().createSystemInters(this.ID_SystemIntersId);
@@ -155,10 +155,10 @@ class IntersController {
 
                 break;
             case Game_Platform.GP_WX:
-                IntersWX.getInstance().createSystemInters(this.ID_SystemIntersId);
+                //IntersWX.getInstance().createSystemInters(this.ID_SystemIntersId);
                 break;
             case Game_Platform.GP_XM:
-                IntersXM.getInstance().createSystemInters(this.ID_SystemIntersId);
+                //IntersXM.getInstance().createSystemInters(this.ID_SystemIntersId);
                 break;
             default:
                 break;

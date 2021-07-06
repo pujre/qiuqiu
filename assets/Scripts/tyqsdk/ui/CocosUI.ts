@@ -944,10 +944,22 @@ class CocosUI {
 
     //点击原生广告
     let tempid = nativeInfo.adId
+    this.tempid=tempid;
     this.nativeIcon.on(cc.Node.EventType.TOUCH_START, function (event) {
       console.log("TYQSDK", "点击原生ICON");
       NativeController.getInstance().reportNativeClick(tempid)
     });
+  }
+ 
+  tempid=0;
+
+  public ShowPrimeval(){
+      console.log("TYQSDK", "点击原生ICON");
+      if(this.tempid==0){
+        console.log("TYQSDK", ",没有原生广告上报展示id");
+        return;
+      }
+      NativeController.getInstance().reportNativeClick(this.tempid)
   }
   /**
    * 隐藏原生ICON

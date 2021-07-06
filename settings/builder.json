@@ -15,7 +15,7 @@
   "webOrientation": "landscape",
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
-  "mergeStartScene": true,
+  "mergeStartScene": false,
   "optimizeHotUpdate": false,
   "md5Cache": true,
   "encryptJs": false,

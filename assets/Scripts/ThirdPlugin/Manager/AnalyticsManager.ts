@@ -49,7 +49,9 @@ export default class AnalyticsManager{
 
     private readonly channelType = {
         [cc.sys.OPPO_GAME]: "oppo",
-        [cc.sys.VIVO_GAME]: "vivo"
+        [cc.sys.VIVO_GAME]: "vivo",
+        [cc.sys.QQ_PLAY]: "QQ",
+        [cc.sys.WECHAT_GAME]: "wechat"
     }
 
     private type: EAnalyticsSDKType = EAnalyticsSDKType.CoCos;

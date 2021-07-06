@@ -4,6 +4,8 @@ import { DataKey } from "../Game/DataKey";
 import UIManage from "./UIManage";
 import TYQAd from "../tyqsdk/TYQAd";
 import SdkTools, { Game_Platform } from "../tyqsdk/tools/SdkTools";
+import CocosUI from "../tyqsdk/ui/CocosUI";
+import IntersQQ from "../tyqsdk/ads/IntersAd/IntersQQ";
 
 /**广告管理脚本*/
 const {ccclass, property} = cc._decorator;
@@ -31,9 +33,7 @@ export default class PureAdManage extends cc.Component {
         console.log('初始化广告')
         TYQAd.getInstance().initAd((isOn) => {
             if (isOn && this.isBanner) {
-                if (cc.sys.platform === cc.sys.VIVO_GAME || cc.sys.platform === cc.sys.OPPO_GAME) {
-                    TYQAd.getInstance().showBanner();
-                }
+                TYQAd.getInstance().showBanner();
             }
         })
         switch (SdkTools.getPlatform()) {
@@ -41,7 +41,6 @@ export default class PureAdManage extends cc.Component {
                 this.ADicon()
                 break
         }
-        this.InterAndDeskTop();
     }
 
     //展示积木广告
@@ -53,6 +52,10 @@ export default class PureAdManage extends cc.Component {
                 }
                 break
         }
+    }
+
+    showDit(callback:any){
+        TYQAd.getInstance().addDeskTop(callback);
     }
 
     //隐藏积木广告
@@ -114,33 +117,7 @@ export default class PureAdManage extends cc.Component {
         TYQAd.getInstance().hideBanner();
     }
 
-    InterAndDeskTop(isOn=false){
-        // if (cc.sys.platform === cc.sys.VIVO_GAME || cc.sys.platform === cc.sys.OPPO_GAME) {
-        //     MiniGameSDK.getNetworkType((result) => {
-        //         if (result) {
-        //             //桌面快捷方式
-        //             if (isOn&&DataManage.getIns().GetItemData(DataKey.addDeskTopIsOn) != 1) {
-        //                 ASCAd.getInstance().getDeskTopFlag(
-        //                     (res) => {
-        //                         if (res == true) {
-        //                             ASCAd.getInstance().addDeskTop((IsOn) => {
-        //                                 if (IsOn == true) {
-        //                                     DataManage.getIns().SetItemData(DataKey.addDeskTopIsOn, 1);
-        //                                 }
-        //                             })
-        //                         }
-        //                     }
-        //                 )
-        //             }
-        //         }
-        //         else {
-        //             MiniGameSDK.showDialog('提示', '无网络，请退出游戏重启网络', () => {
-        //                 MiniGameSDK.exitApplication();
-        //             });
-        //         }
-        //     });
-        // }
-    }
+    
 
     ShowVideo(callback:any=null){
         if(TYQAd.getInstance().getVideoFlag()){
@@ -170,12 +147,25 @@ export default class PureAdManage extends cc.Component {
 
     //展示插屏
     ShowInters(callback:any=null){
-        //return
-        //#region 插屏广告
-        if (TYQAd.getInstance().getIntersFlag()){
-            TYQAd.getInstance().showInters();
+        switch (SdkTools.getPlatform()) {
+            case Game_Platform.GP_QQ:
+                if(IntersQQ.getInstance().getSystemIntersFlag()){
+                    IntersQQ.getInstance().showSystemInters();
+                }
+                break
+
+            case Game_Platform.GP_Vivo:
+                if (TYQAd.getInstance().getIntersFlag()){
+                    TYQAd.getInstance().showInters();
+                }
+                break;
         }
-        //#endregion
+
+    }
+
+    ShowPrimeval(){
+        console.log("TYQSDK", "点击原生ICON");
+        CocosUI.getInstance().ShowPrimeval();
     }
 
     
