@@ -9,6 +9,8 @@ import IntersController from "../ads/IntersAd/IntersController";
 class CocosUI {
   private static instance: CocosUI
 
+  tempid=0;
+
   /**
    * cocos creator 分组
    */
@@ -951,8 +953,7 @@ class CocosUI {
     });
   }
  
-  tempid=0;
-
+  
   public ShowPrimeval(){
       console.log("TYQSDK", "点击原生ICON");
       if(this.tempid==0){
@@ -1036,6 +1037,7 @@ class CocosUI {
 
     //点击原生广告
     let tempid = nativeInfo.adId
+    this.tempid=tempid;
     this.nativeImage.on(cc.Node.EventType.TOUCH_START, function (event) {
       console.log("TYQSDK", "点击原生大图");
       NativeController.getInstance().reportNativeClick(tempid)

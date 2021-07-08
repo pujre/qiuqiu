@@ -357,6 +357,7 @@ export default class GamePanel extends cc.Component {
         AnalyticsManager.getInstance().raiseLevelEvent(EAnalyticsEvent.Start,{level:levelId.toString()});
         PureHelper.EventTimes('LevelsOStar',10000);
         PureAdManage.getIns().HideBlockad();
+        PureAdManage.getIns().HideBanner();
         var pose=null;
         if(this.LevelNode){
             if(this.isPos&&levelId==this.LevelNode.getComponent(LevelMode).Level){
