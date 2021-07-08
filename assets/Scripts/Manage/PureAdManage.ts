@@ -72,7 +72,7 @@ export default class PureAdManage extends cc.Component {
             case Game_Platform.GP_QQ:
                 let share=qq.shareAppMessage({
                     title:'',
-                    imageUrl:'',
+                    imageUrl:'https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/Game/jswr/shaderImage/189d46f49a34cc6b10cc5a542867bd6.png',
                     query:'',
                     shareAppType:'',
                     entryDataHash:'',
