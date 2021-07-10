@@ -11,7 +11,6 @@ class NativeController {
     public ID_NativeID = "c27fdbd67d014341886b53935b493d8a";
     public SW_NativeMainSwitch = true;   //原生总开关
 
-
     /**
      * 原生插屏上报次数
      */

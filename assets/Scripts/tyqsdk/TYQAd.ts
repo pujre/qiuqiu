@@ -45,7 +45,7 @@ class TYQAd {
   initAd(callback?) {
     console.log("TYQSDK", "initAd");
     console.log("TYQSDK", "当前SDKVersion：" + sdkConfig.SDKVersion);
-    console.log("TYQSDK", "当前渠道：" + this.channelArray[SdkTools.getPlatform()]);
+   
     //用于防止多次初始化
     if (this.hasBeenInit) {
       console.log("TYQSDK", "重复初始化initAd return================");
@@ -64,9 +64,10 @@ class TYQAd {
     // 先登陆成功再请求广告配置
     Network.getInstance().login(function (success) {
       if (success) {
-        callback ? Network.getInstance().getSDKOnlineConfig(callback) : Network.getInstance().getSDKOnlineConfig();
       }
     })
+    Network.getInstance().getSDKOnlineConfig(callback)
+    console.log("TYQSDK", "当前渠道：" + this.channelArray[SdkTools.getPlatform()]);
   }
 
 

@@ -3,6 +3,7 @@ import TaskManage from "../Manage/TaskManage";
 import PureAdManage from "../Manage/PureAdManage";
 import DataManage from "../Manage/DataManage";
 import UIManage from "../Manage/UIManage";
+import SdkTools, { Game_Platform } from "../tyqsdk/tools/SdkTools";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -21,6 +22,9 @@ export default class SiginPanel extends cc.Component {
             clickEventHandler.handler = "OnClick";//这是注册得方法
             clickEventHandler.customEventData = Btns[i].node.name;
             Btns[i].clickEvents.push(clickEventHandler);
+            if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()==Game_Platform.GP_QQ){
+                Btns[i].node.active=false;
+            }
         }
     }
 
@@ -92,7 +96,9 @@ export default class SiginPanel extends cc.Component {
                 }
                 break;
             case 'LookAD':
-                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                //console.log("点击查看原生广告按钮，待加入查看原生广告");
+                //PureAdManage.getIns().ShowInters();
+                PureAdManage.getIns().ShowPrimeval();
                 break;
             case '':
                 break;

@@ -17,9 +17,9 @@ export default class LevelMode extends cc.Component {
     @property(cc.Label)
     LevelLabel: cc.Label = null;
     posNode: cc.Node = null;
-
+    @property(cc.Node)
     PlayerFace: cc.Node = null;
-
+    @property(cc.Node)
     aimsface: cc.Node = null;
     aims: cc.Node = null;
 
@@ -59,12 +59,11 @@ export default class LevelMode extends cc.Component {
                     this.PlayerFace.position = cc.v2(0, 0);
                     this.PlayerFace.addComponent(cc.Sprite);
                 }
-                if(SkillId==0){
-                   
-                    this.node.getChildByName('player').getChildByName('game_blue').active=true;
-                }else{
-                    this.node.getChildByName('player').getChildByName('game_blue').active=false;
-                }
+                // if(SkillId==0){
+                //     this.node.getChildByName('player').getChildByName('game_blue').active=true;
+                // }else{
+                //     this.node.getChildByName('player').getChildByName('game_blue').active=false;
+                // }
                 cc.loader.loadRes('NewSkin/skin_'+(SkillId+1).toString()+'/'+args[0],cc.SpriteFrame,(err,sf)=>{
                     this.PlayerFace.getComponent(cc.Sprite).spriteFrame = sf;
                     if(sf.getRect().height<=50||sf.getRect().width<=50){

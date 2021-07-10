@@ -5,6 +5,8 @@ class BannerQQ {
 
     private static instance: BannerQQ
 
+    public ID_BannerId;
+
     /**
      * banner广告对象
      */
@@ -44,7 +46,7 @@ class BannerQQ {
             console.log("TYQSDK", "QQ bannerId为空");
             return;
         }
-
+        this.ID_BannerId=BannerId;
         console.log('TYQSDK', 'QQ Banner广告初始化', BannerId);
 
         let self = this;
@@ -125,7 +127,7 @@ class BannerQQ {
                 this.bannerAd.offLoad();
                 this.bannerAd.offError();
                 this.bannerAd.destroy();
-                this.createSystemBanner(BannerController.getInstance().ID_BannerId);
+                this.createSystemBanner( this.ID_BannerId);
             }, BannerController.getInstance().NUM_BannerUpdateTime * 1000)
     }
 

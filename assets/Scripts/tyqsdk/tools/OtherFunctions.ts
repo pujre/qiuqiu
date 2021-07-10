@@ -9,7 +9,7 @@ class OtherFunctions {
     /**
      * 添加桌面图标开关
      */
-    public SW_DesktopSwitch: boolean = false;
+    public SW_DesktopSwitch: boolean = true;
 
     /**
      * 插屏间隔弹桌面图标开关

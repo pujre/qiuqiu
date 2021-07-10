@@ -2,7 +2,7 @@
  * cocos 统计sdk的封装
  * 操作文档: https://n-analytics.cocos.com/docs/quick_start.html
  * 
- * 2020-4-11 by zhibin
+ * 2020-4-11
  */
 
 import AnalyticsParent from "./AnalyticsParent";
@@ -29,7 +29,6 @@ export default class CocosAnalyticsPack extends AnalyticsParent{
         else if(event == EAnalyticsEvent.Success){
             cocosAnalytics.CAAccount.loginSuccess({
                 userID: this.initParams.userId,
-                // userID: 'dddddddd',
                 age: 1,
                 sex: 0,
                 channel: this.initParams.channel
@@ -78,7 +77,6 @@ export default class CocosAnalyticsPack extends AnalyticsParent{
         if(event == EAnalyticsEvent.Start){
             cocosAnalytics.CALevels.begin({
                 level: id,
-                reason: param.reason
             })
         }
         else if (event == EAnalyticsEvent.Success) {
@@ -88,7 +86,8 @@ export default class CocosAnalyticsPack extends AnalyticsParent{
         }
         else if (event == EAnalyticsEvent.Fail) {
             cocosAnalytics.CALevels.failed({
-                level: id
+                level: id,
+                reason: param.reason
             })
         }
     }

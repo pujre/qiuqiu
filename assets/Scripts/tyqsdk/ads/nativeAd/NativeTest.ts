@@ -61,6 +61,9 @@ class NativeTest {
             if (CocosUI.getInstance().cocosGroup != "") {
                 this.nativeIcon.group = CocosUI.getInstance().cocosGroup;
             }
+
+
+            
         });
     }
     /**

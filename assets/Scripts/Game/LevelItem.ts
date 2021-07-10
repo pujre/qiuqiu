@@ -1,5 +1,4 @@
 import DataManage from "../Manage/DataManage";
-import LoadGameScene from "../SmallTools/LoadGameScene";
 import UIManage from "../Manage/UIManage";
 
 const {ccclass, property} = cc._decorator;

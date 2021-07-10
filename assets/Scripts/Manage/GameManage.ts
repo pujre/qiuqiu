@@ -1,7 +1,7 @@
 import DataManage from "./DataManage";
 import EventCenter from "./EventCenter";
 import { DataKey, EventHead } from "../Game/DataKey";
-import AnalyticsManager, { EAnalyticsSDKType } from "../ThirdPlugin/Manager/AnalyticsManager";
+import AnalyticsManager, { EAnalyticsEvent, EAnalyticsSDKType } from "../ThirdPlugin/Manager/AnalyticsManager";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -66,14 +66,14 @@ export default class GameManage extends cc.Component {
             DataManage.getIns().SetSkill(0,0,true);//默认皮肤
             DataManage.getIns().SetSkill(9,1,true);//默认皮肤
             DataManage.getIns().SetItemData(DataKey.SigininNumber,0);  /**累计登录天数 */
-            DataManage.getIns().SetProp(1,100); /**游戏道具 */
+            DataManage.getIns().SetProp(1,1); /**游戏道具 */
             DataManage.getIns().SetItemData(DataKey.UnLockLevel+'1',1);//默认解锁第一关
         }
     }
 
     start() {
-        //AnalyticsManager.getInstance().login(EAnalyticsEvent.Start);
-        //AnalyticsManager.getInstance().login(EAnalyticsEvent.Success);
+        AnalyticsManager.getInstance().login(EAnalyticsEvent.Start);
+        AnalyticsManager.getInstance().login(EAnalyticsEvent.Success);
     }
 
     /**

@@ -6,6 +6,7 @@ class BannerVivo {
 
     private static instance: BannerVivo
 
+    public ID_BannerId;
     /**
      * banner广告对象
      */
@@ -40,7 +41,7 @@ class BannerVivo {
             console.log("TYQSDK", "VIVO bannerId为空");
             return;
         }
-
+        this.ID_BannerId=BannerId;
         console.log('TYQSDK', 'VIVO Banner广告初始化', BannerId);
 
         this.bannerAd = qg.createBannerAd({
@@ -83,7 +84,7 @@ class BannerVivo {
             this.systemBannerOnShow = true;
             this.bannerAd.show();
         } else {
-            this.createSystemBanner(BannerController.getInstance().ID_BannerId);
+            this.createSystemBanner( this.ID_BannerId);
             this.updateSytemBannerTmt =
                 setTimeout(() => {
                     this.systemBannerOnShow = true;
@@ -103,7 +104,7 @@ class BannerVivo {
             this.bannerAd.offError();
             this.bannerAd.offLoad();
             this.bannerAd.destroy();
-            this.createSystemBanner(BannerController.getInstance().ID_BannerId);
+            this.createSystemBanner(this.ID_BannerId);
             this.updateSytemBannerTmt =
                 setTimeout(() => {
                     self.systemBannerOnShow = true;

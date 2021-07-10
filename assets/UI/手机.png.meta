@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "5612a882-e68d-4931-ad27-3b77be8e1b6d",
+  "uuid": "b9fb6cbe-7b71-4518-9c07-52870623cd12",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,10 +9,10 @@
   "packable": true,
   "platformSettings": {},
   "subMetas": {
-    "closee  2": {
+    "手机": {
       "ver": "1.0.4",
-      "uuid": "e72e0528-add3-4653-945d-e8a7d89b6403",
-      "rawTextureUuid": "5612a882-e68d-4931-ad27-3b77be8e1b6d",
+      "uuid": "2797e4b1-c6a1-4882-94fd-ab51ddd64bbc",
+      "rawTextureUuid": "b9fb6cbe-7b71-4518-9c07-52870623cd12",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -20,10 +20,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 17,
-      "height": 18,
-      "rawWidth": 17,
-      "rawHeight": 18,
+      "width": 43,
+      "height": 68,
+      "rawWidth": 43,
+      "rawHeight": 68,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

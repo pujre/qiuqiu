@@ -1,7 +1,6 @@
 import GameManage from "../Manage/GameManage";
 import ToolsHelper from "../Common/Helper/ToolsHelper";
 import UIManage from "../Manage/UIManage";
-import DataManage from "../Manage/DataManage";
 import { DataKey, EventHead } from "./DataKey";
 import AudioManager from "../Common/Manager/AudioManager";
 import LevelMode from "./LevelMode";

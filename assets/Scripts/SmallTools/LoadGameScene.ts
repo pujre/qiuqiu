@@ -9,37 +9,35 @@ export default class LoadGameScene extends cc.Component {
     @property(cc.Sprite)
     loading:cc.Sprite=null;
 
-    start () {
-        //this.DeskTop();
-        this.scheduleOnce(()=>{
-            if(this.SceneName!='')cc.director.loadScene(this.SceneName);
-        },1.5);
-        this.LoadFill();
+    private progressNum: number = 0;
+    loadComplete: boolean = false;
+
+
+    onLoad () {
+        this.loadScene(this.SceneName);
     }
 
-
-    LoadFill(){
-        this.schedule(()=>{
-            // 这里的 this 指向 component
-            this.loading.fillRange+=0.01;
-        }, 0.01, 99, 0);
+    loadScene(scene: string) {
+        let self = this;
+        cc.director.preloadScene(scene,
+            function (completedCount, totalCount, item) {
+                if (completedCount / totalCount > self.progressNum) {
+                    self.progressNum = completedCount / totalCount;
+                    self.loading.fillRange=self.progressNum;
+                    cc.log("加载进度" + self.progressNum+' 资源总数为：'+totalCount+'  当前已加载的资源数为：'+completedCount+ ' item:'+item.url);
+                }
+            },
+            function (error: Error, asset) {
+                self.loadComplete = true;
+                cc.log("场景资源加载完成");
+            }
+        )
     }
-
-
-    DeskTop(){
-        if (cc.sys.platform === cc.sys.VIVO_GAME || cc.sys.platform === cc.sys.OPPO_GAME) {
-            MiniGameSDK.getNetworkType((result) => {
-                if (result) {
-                    
-                }
-                else {
-                    MiniGameSDK.showDialog('提示', '无网络，请退出游戏重启网络', () => {
-                        MiniGameSDK.exitApplication();
-                    });
-                }
-            });
+    update(dt){
+        if(this.loadComplete){
+            cc.log("开始跳转场景");
+            this.loadComplete=false;
+            cc.director.loadScene(this.SceneName);
         }
     }
-
-    // update (dt) {}
 }

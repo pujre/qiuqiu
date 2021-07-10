@@ -9,6 +9,8 @@ import IntersController from "../ads/IntersAd/IntersController";
 class CocosUI {
   private static instance: CocosUI
 
+  tempid=0;
+
   /**
    * cocos creator 分组
    */
@@ -273,8 +275,8 @@ class CocosUI {
     }
 
     var urlList = [
-      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ICONAd.png",
-      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ad.png",
+      "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/IconClose.png",
     ];
 
     var self = this;
@@ -906,7 +908,7 @@ class CocosUI {
     setTimeout(() => {
       ICONTip.width = width / 3;
       ICONTip.height = ICONTip.width / 70 * 34;
-      ICONTip.x = width / 2 - ICONTip.width / 2;
+      ICONTip.x = width / 2 + ICONTip.width / 2;
       ICONTip.y = height / 2 - ICONTip.height / 2;
     }, 1);
     this.nativeIcon.addChild(ICONTip);
@@ -917,7 +919,7 @@ class CocosUI {
     setTimeout(() => {
       ICONClose.width = 45;
       ICONClose.height = 45;
-      ICONClose.x = -this.nativeIcon.width / 2 + ICONClose.width / 2;
+      ICONClose.x = -this.nativeIcon.width / 2 - ICONClose.width / 2;
       ICONClose.y = this.nativeIcon.height / 2 - ICONClose.width / 2;
     }, 1);
     this.nativeIcon.addChild(ICONClose);
@@ -944,10 +946,21 @@ class CocosUI {
 
     //点击原生广告
     let tempid = nativeInfo.adId
+    this.tempid=tempid;
     this.nativeIcon.on(cc.Node.EventType.TOUCH_START, function (event) {
       console.log("TYQSDK", "点击原生ICON");
       NativeController.getInstance().reportNativeClick(tempid)
     });
+  }
+ 
+  
+  public ShowPrimeval(){
+      console.log("TYQSDK", "点击原生ICON");
+      if(this.tempid==0){
+        console.log("TYQSDK", ",没有原生广告上报展示id");
+        return;
+      }
+      NativeController.getInstance().reportNativeClick(this.tempid)
   }
   /**
    * 隐藏原生ICON
@@ -1024,6 +1037,7 @@ class CocosUI {
 
     //点击原生广告
     let tempid = nativeInfo.adId
+    this.tempid=tempid;
     this.nativeImage.on(cc.Node.EventType.TOUCH_START, function (event) {
       console.log("TYQSDK", "点击原生大图");
       NativeController.getInstance().reportNativeClick(tempid)

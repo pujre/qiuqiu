@@ -10,6 +10,7 @@ import PureAdManage from "../Manage/PureAdManage";
 import TaskManage from "../Manage/TaskManage";
 import EventCenter from "../Manage/EventCenter";
 import AnalyticsManager, { EAnalyticsEventType, EAnalyticsEvent } from "../ThirdPlugin/Manager/AnalyticsManager";
+import SdkTools, { Game_Platform } from "../tyqsdk/tools/SdkTools";
 
 const {ccclass, property} = cc._decorator;
 
@@ -39,6 +40,8 @@ export default class GamePanel extends cc.Component {
     @property(cc.Node)
     key_1:cc.Node=null;
 
+    dit:cc.Node;
+
 
     onLoad () {
         var Btns: cc.Button[] = this.node.getComponentsInChildren(cc.Button);
@@ -65,6 +68,18 @@ export default class GamePanel extends cc.Component {
             }
             if(Btns[i].node.name=='reference1'){
                 this.reference1Btn=Btns[i].node;
+            }
+            if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()!=Game_Platform.GP_Vivo){
+                Btns[i].node.active=false;
+            }
+            if(Btns[i].node.name=='Dit'){
+                this.dit=Btns[i].node;
+                if(DataManage.getIns().GetItemData("isDit")!=null){
+                    this.dit.active=false;
+                }
+            }
+            if(Btns[i].node.name=='Dit'&&SdkTools.getPlatform()!=Game_Platform.GP_Vivo){
+                Btns[i].node.active=false;
             }
         }
 
@@ -163,10 +178,14 @@ export default class GamePanel extends cc.Component {
             })
                 break;
             case 'rigihtAD':
-                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                //PureAdManage.getIns().ShowInters();
+                PureAdManage.getIns().ShowPrimeval();
+                //console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'LookAD':
-                console.log("点击查看原生广告按钮，待加入查看原生广告");
+                //PureAdManage.getIns().ShowInters();
+                PureAdManage.getIns().ShowPrimeval();
+                //console.log("点击查看原生广告按钮，待加入查看原生广告");
                 break;
             case 'Music':
                 AudioManager.setEffectVolume(AudioManager.getEffectVolume()==1?0:1);
@@ -194,6 +213,14 @@ export default class GamePanel extends cc.Component {
             case 'reference1':
             case 'nextLevel'://下一关
                 this.Nextlevel();
+                break;
+            case 'Dit':
+                PureAdManage.getIns().showDit((isOn)=>{
+                    if(isOn){
+                        this.dit.active=false;
+                        DataManage.getIns().SetItemData("isDit",1);
+                    }
+                });
                 break;
             case'Sigin':
                 UIManage.GetSiginPanel().node.active=true;
@@ -262,6 +289,12 @@ export default class GamePanel extends cc.Component {
                 this.node.getChildByName('ADPanel').getChildByName('prompt_01').active=true;
                 this.node.getChildByName('ADPanel').getChildByName('label').getComponent(cc.Label).string='是否观看视频跳过此关。';
                 break;
+            case 'ShareGame':
+                PureAdManage.getIns().ShareGame();
+                break;
+            case 'moreGame':
+                PureAdManage.getIns().Moregame();
+                break;
             case 'AD':
                 PureAdManage.getIns().ShowVideo(() => {
                     console.log("播放广告成功");
@@ -323,6 +356,8 @@ export default class GamePanel extends cc.Component {
     LoadLevel(levelId:number,isStatus:boolean=true){
         AnalyticsManager.getInstance().raiseLevelEvent(EAnalyticsEvent.Start,{level:levelId.toString()});
         PureHelper.EventTimes('LevelsOStar',10000);
+        PureAdManage.getIns().HideBlockad();
+        PureAdManage.getIns().HideBanner();
         var pose=null;
         if(this.LevelNode){
             if(this.isPos&&levelId==this.LevelNode.getComponent(LevelMode).Level){
@@ -372,7 +407,7 @@ export default class GamePanel extends cc.Component {
         if(this.NowLevelId!=1){
             this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },1)  
         }
-        
+        PureAdManage.getIns().ShowBlockad();
         let Overs:cc.Node=this.node.getChildByName('Overs');
         let Win:cc.Node=Overs.getChildByName('Win');
         let Lose:cc.Node=Overs.getChildByName('Lose');
@@ -409,6 +444,21 @@ export default class GamePanel extends cc.Component {
         }else{
             Win.active=false;
             Lose.active=true;
+        }
+        let obj=isOn?Win:Lose;
+        switch (SdkTools.getPlatform()) {
+            case Game_Platform.GP_QQ:
+                obj.getChildByName("ShareGame").active=true;
+                obj.getChildByName("moreGame").active=true;
+                obj.getChildByName("LookAD").active=false;
+                break
+            case Game_Platform.GP_Vivo:
+                obj.getChildByName("ShareGame").active=false;
+                obj.getChildByName("moreGame").active=false;
+                obj.getChildByName("LookAD").active=true;
+                break;
+                default:
+                break;
         }
     }
 
