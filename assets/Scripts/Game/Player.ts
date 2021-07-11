@@ -70,7 +70,7 @@ export default class Player extends cc.Component {
                     ToolsHelper.moveNode(obj, UIManage.GetGamePanel().LevelNode.getChildByName('Back'));
                     obj.position = this.node.position;
                 } else {
-                    cc.view.enableAntiAlias(true)
+                    //cc.view.enableAntiAlias(true)
                     GameManage.getIns().Graphics.fillRect(this.node.position.x, this.node.position.y, 4, 4);
                     GameManage.getIns().Graphics.fill();
                 }

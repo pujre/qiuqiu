@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "dc4aa55f-7d77-4481-9d0f-457d2a419dac",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 63,
+  "height": 42,
   "platformSettings": {},
   "subMetas": {
     "game_09": {

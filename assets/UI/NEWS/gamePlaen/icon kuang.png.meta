@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "fb56d8ab-2895-496b-95a9-bc3f67f9018c",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 134,
+  "height": 134,
   "platformSettings": {},
   "subMetas": {
     "icon kuang": {

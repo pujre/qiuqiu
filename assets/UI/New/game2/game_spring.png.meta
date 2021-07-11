@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "0b7248d8-8b21-45f1-a11a-f4b38de096ef",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 73,
+  "height": 72,
   "platformSettings": {},
   "subMetas": {
     "game_spring": {

@@ -39,9 +39,9 @@ export default class SiginPanel extends cc.Component {
         if (singinNum == 1 && !TaskManage.getIns().GetIsSiginin()) {
             this.node.getChildByName('SinginDoubleBtn').active=false;
             this.node.getChildByName('SiginBtn').active = true;
-            this.node.getChildByName('SiginBtn').position=cc.v2(0,this.node.getChildByName('SiginBtn').position.y);
+            //this.node.getChildByName('SiginBtn').position=cc.v2(0,this.node.getChildByName('SiginBtn').position.y);
         }else{
-            this.node.getChildByName('SiginBtn').position=this.pos;
+            //this.node.getChildByName('SiginBtn').position=this.pos;
         }
         for (let i = 0; i < rh.length; i++) {
             if (i < singinNum) {

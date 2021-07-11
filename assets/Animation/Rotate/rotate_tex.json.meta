@@ -1,7 +1,5 @@
 {
-  "ver": "1.0.0",
+  "ver": "1.0.1",
   "uuid": "3ddf9e6d-4e5e-41d1-92a1-2ad5c8aa1829",
-  "atlasJson": "{\"width\":64,\"SubTexture\":[{\"width\":50,\"y\":1,\"height\":50,\"name\":\"xw\",\"x\":1}],\"height\":64,\"name\":\"rotate\",\"imagePath\":\"rotate_tex.png\"}",
-  "texture": "0c2f8e81-ef18-4602-8c34-3b691567dbc2",
   "subMetas": {}
 }
