@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "493dfdf5-77d0-42c5-824c-d1602c5e7657",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 158,
+  "height": 151,
   "platformSettings": {},
   "subMetas": {
     "Signin_lattice5": {

@@ -56,7 +56,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         -216.4550018310547,
         -193.22000122070312,
@@ -129,7 +129,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0.7839999794960022,
         67.1610107421875,

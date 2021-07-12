@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "045010b4-4167-40a3-9002-58fbc0e7e5a4",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 93,
+  "height": 84,
   "platformSettings": {},
   "subMetas": {
     "shou2": {

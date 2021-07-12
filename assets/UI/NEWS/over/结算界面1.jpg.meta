@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "b26843ce-c262-4a2b-a652-c0ca6d00a784",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 1600,
+  "height": 720,
   "platformSettings": {},
   "subMetas": {
     "结算界面1": {

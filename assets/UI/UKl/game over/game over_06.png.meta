@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "a5f41d40-5a64-4c16-be55-de0a50d6e097",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 1280,
+  "height": 720,
   "platformSettings": {},
   "subMetas": {
     "game over_06": {

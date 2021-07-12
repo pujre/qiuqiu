@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "73424097-d9d6-43a7-8703-bfaf9e27c39a",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 82,
+  "height": 82,
   "platformSettings": {},
   "subMetas": {
     "Signin_hook": {

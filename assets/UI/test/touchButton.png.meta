@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "7ea23b6b-3066-49b3-b8e9-7d4ec50160fc",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 339,
+  "height": 102,
   "platformSettings": {},
   "subMetas": {
     "touchButton": {

@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.3.5",
   "uuid": "4e7d85db-5c17-475e-8695-aafba4b3a165",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -7,6 +7,8 @@
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
+  "width": 88,
+  "height": 88,
   "platformSettings": {},
   "subMetas": {
     "Shock": {

@@ -1,7 +1,5 @@
 {
-  "ver": "1.0.0",
+  "ver": "1.0.1",
   "uuid": "7bb7f0d8-9825-4213-ba50-1a59702642ec",
-  "atlasJson": "{\"width\":512,\"SubTexture\":[{\"width\":63,\"y\":1,\"height\":69,\"name\":\"外机1\",\"x\":195},{\"width\":33,\"y\":196,\"height\":33,\"name\":\"风扇\",\"x\":44},{\"width\":41,\"y\":196,\"height\":41,\"name\":\"小圆1\",\"x\":1},{\"width\":192,\"y\":1,\"height\":193,\"name\":\"game_scope-box\",\"x\":1}],\"height\":256,\"name\":\"Fan\",\"imagePath\":\"Fan_tex.png\"}",
-  "texture": "0d263120-54f0-4c4b-ba1a-a830a93b5c2f",
   "subMetas": {}
 }
