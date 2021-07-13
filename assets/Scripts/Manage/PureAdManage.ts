@@ -31,8 +31,8 @@ export default class PureAdManage extends cc.Component {
 
     start() {
         console.log('初始化广告')
-        TYQAd.getInstance().initAd((isOn) => {
-            if (isOn && this.isBanner) {
+        TYQAd.getInstance().initAd(() => {
+            if (this.isBanner) {
                 TYQAd.getInstance().showBanner();
             }
         })
@@ -52,6 +52,9 @@ export default class PureAdManage extends cc.Component {
                     TYQAd.getInstance().showBlock("landscape", 32, 32, 5);
                 }
                 break
+            case Game_Platform.GP_Vivo:
+                this.ADicon();
+                break;
         }
     }
 
@@ -65,6 +68,10 @@ export default class PureAdManage extends cc.Component {
             case Game_Platform.GP_QQ:
                 TYQAd.getInstance().hideBlock();
                 break
+            case Game_Platform.GP_Vivo:
+                TYQAd.getInstance().hideNativeIcon();
+                break;
+
         }
     }
 
@@ -107,7 +114,7 @@ export default class PureAdManage extends cc.Component {
     
 
     ADicon(){
-        TYQAd.getInstance().showNativeIcon(100,100,60,cc.winSize.height-(cc.winSize.height/3));
+        TYQAd.getInstance().showNativeIcon(120,120,120,cc.winSize.height-(cc.winSize.height/3));
     }
 
     ShowBanner(){

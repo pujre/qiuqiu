@@ -49,7 +49,7 @@ class BannerController {
     /**
      * 原生banner开关
     */
-    public SW_NativeBannerSwitch = false;
+    public SW_NativeBannerSwitch = true;
 
     /**
      * 刷新广告条的计时器

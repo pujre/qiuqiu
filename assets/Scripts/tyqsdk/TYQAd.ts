@@ -62,10 +62,8 @@ class TYQAd {
     }
 
     // 先登陆成功再请求广告配置
-    Network.getInstance().login(function (success) {
-      if (success) {
-      }
-    })
+    Network.getInstance().login(function (success) {})
+    SdkTools.getInstance().initSystemInfo(function (success) {});
     Network.getInstance().getSDKOnlineConfig(callback)
     console.log("TYQSDK", "当前渠道：" + this.channelArray[SdkTools.getPlatform()]);
   }

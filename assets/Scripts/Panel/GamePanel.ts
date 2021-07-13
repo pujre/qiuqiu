@@ -408,6 +408,7 @@ export default class GamePanel extends cc.Component {
             this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },1)  
         }
         PureAdManage.getIns().ShowBlockad();
+        PureAdManage.getIns().ShowBanner();
         let Overs:cc.Node=this.node.getChildByName('Overs');
         let Win:cc.Node=Overs.getChildByName('Win');
         let Lose:cc.Node=Overs.getChildByName('Lose');

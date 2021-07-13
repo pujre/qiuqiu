@@ -672,7 +672,8 @@ class Network {
 
 
         IntersController.getInstance().runIntersInterval();
-        SdkTools.getInstance().initSystemInfo(callback);
+        //SdkTools.getInstance().initSystemInfo(callback);
+        callback(true);
     //   }
     // }
 
@@ -775,7 +776,7 @@ class Network {
 
     //       self.isInitCompelete++;
     //       if (callback && self.isInitCompelete == 2) {
-             callback(true);
+             
     //       }
     //     }
     //   };

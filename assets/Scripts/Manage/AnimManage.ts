@@ -46,22 +46,22 @@ export default class AnimManage extends cc.Component {
     }
 
     /**跳跃移动到指定点（抛物线曲线） */
-    BezierMoveTo(cnode: cc.Node, endpos: cc.Vec2, coefficient: number, time: number, callfunc: any = null):cc.Action{
-        var pos1: cc.Vec2 = cnode.position;
-        var pos3: cc.Vec2 = endpos;
-        var plrs = 700;
-        var pos2: cc.Vec2 = new cc.Vec2((pos1.x + pos3.x) / 2, plrs * coefficient);//曲率
-        var arr: cc.Vec2[] = [pos1, pos2, pos3];
-        var que=cnode.runAction(
-            cc.sequence(cc.bezierTo(time, arr),
-                cc.callFunc(() => {
-                    if (callfunc) {
-                        callfunc();
-                    }
-                })
-            ));
-        return que;
-    }
+    // BezierMoveTo(cnode: cc.Node, endpos: cc.Vec2, coefficient: number, time: number, callfunc: any = null):cc.Action{
+    //     var pos1: cc.Vec2 = cnode.position;
+    //     var pos3: cc.Vec2 = endpos;
+    //     var plrs = 700;
+    //     var pos2: cc.Vec2 = new cc.Vec2((pos1.x + pos3.x) / 2, plrs * coefficient);//曲率
+    //     var arr: cc.Vec2[] = [pos1, pos2, pos3];
+    //     var que=cnode.runAction(
+    //         cc.sequence(cc.bezierTo(time, arr),
+    //             cc.callFunc(() => {
+    //                 if (callfunc) {
+    //                     callfunc();
+    //                 }
+    //             })
+    //         ));
+    //     return que;
+    // }
 
     /**原地跳跃 */
     JumpInPlace(cnode: cc.Node,height:number,times:number, callfunc: any = null){
