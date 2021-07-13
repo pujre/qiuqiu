@@ -107,7 +107,7 @@ class BannerController {
         }
         switch (SdkTools.getPlatform()) {
             case Game_Platform.GP_Oppo:
-                //BannerOppo.getInstance().createSystemBanner(this.ID_BannerId);
+                BannerOppo.getInstance().createSystemBanner('350397');
                 break;
             case Game_Platform.GP_Vivo:
                 //BannerVivo.getInstance().createSystemBanner(this.ID_BannerId);

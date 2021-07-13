@@ -8,7 +8,7 @@ import NativeHW from "./NativeHW";
 
 class NativeController {
     private static instance: NativeController
-    public ID_NativeID = "c27fdbd67d014341886b53935b493d8a";
+    //public ID_NativeID = "";
     public SW_NativeMainSwitch = true;   //原生总开关
 
     /**
@@ -75,16 +75,16 @@ class NativeController {
                 CocosUI.getInstance().loadNativeInstersRes();
                 CocosUI.getInstance().loadNativeBannerRes();
                 CocosUI.getInstance().loadNativeIconRes();
-                NativeOppo.getInstance().createNativeAd(this.ID_NativeID);
+                NativeOppo.getInstance().createNativeAd("350399");
                 break;
             case Game_Platform.GP_Vivo:
                 CocosUI.getInstance().loadNativeInstersRes();
                 CocosUI.getInstance().loadNativeBannerRes();
                 CocosUI.getInstance().loadNativeIconRes();
-                NativeVivo.getInstance().createNativeAd(this.ID_NativeID);
+                NativeVivo.getInstance().createNativeAd("c27fdbd67d014341886b53935b493d8a");
                 break;
             case Game_Platform.GP_WX:
-                NativeWX.getInstance().createNativeAd(this.ID_NativeID);
+                NativeWX.getInstance().createNativeAd('');
                 return;
             case Game_Platform.GP_HW:
                 CocosUI.getInstance().loadNativeInstersRes();

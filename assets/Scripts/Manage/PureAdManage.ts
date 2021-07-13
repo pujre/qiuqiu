@@ -38,6 +38,7 @@ export default class PureAdManage extends cc.Component {
         })
         switch (SdkTools.getPlatform()) {
             case Game_Platform.GP_Vivo:
+            case Game_Platform.GP_Oppo:
                 this.ADicon()
                 break
         }
@@ -158,6 +159,9 @@ export default class PureAdManage extends cc.Component {
                 if (TYQAd.getInstance().getIntersFlag()){
                     TYQAd.getInstance().showInters();
                 }
+                break
+            case Game_Platform.GP_Oppo:
+                //this.ShowPrimeval();
                 break;
         }
 

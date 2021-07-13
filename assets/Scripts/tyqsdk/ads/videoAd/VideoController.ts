@@ -47,7 +47,7 @@ class VideoController {
         }
         switch (SdkTools.getPlatform()) {
             case Game_Platform.GP_Oppo:
-                //VideoOppo.getInstance().createVideoAd(this.ID_VideoID);
+                VideoOppo.getInstance().createVideoAd("350398");
                 break;
             case Game_Platform.GP_Vivo:
                 VideoVivo.getInstance().createVideoAd("7c460fa6046545b6a32b219b3126572e");
