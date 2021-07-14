@@ -30,6 +30,8 @@ export default class GamePanel extends cc.Component {
     RotateNode:cc.Node=null;
     @property(cc.Node)
     keyus:cc.Node=null;
+    @property(cc.Node)
+    LookAd:cc.Node=null;
     /**是否记录位置 */
     isPos:boolean=false;
     SinginBall:cc.Node=null;
@@ -97,6 +99,17 @@ export default class GamePanel extends cc.Component {
         this.TouchNode.on(cc.Node.EventType.TOUCH_MOVE, (enevt: cc.Event.EventTouch) => {
             this.TouchMoveUs(enevt);
         }, this.TouchNode)
+        switch (SdkTools.getPlatform()) {
+            case Game_Platform.GP_QQ:
+                break
+            case Game_Platform.GP_Vivo:
+                this.LookAd.active=true;
+                break;
+            case Game_Platform.GP_Tiktok:
+                break;
+            default:
+                break;
+        }
     }
 
     TouchStart(enevt:cc.Event.EventTouch){
@@ -449,16 +462,18 @@ export default class GamePanel extends cc.Component {
         let obj=isOn?Win:Lose;
         switch (SdkTools.getPlatform()) {
             case Game_Platform.GP_QQ:
-                obj.getChildByName("ShareGame").active=true;
-                obj.getChildByName("moreGame").active=true;
-                obj.getChildByName("LookAD").active=false;
+                obj.getChildByName("ShareGame").active = true;
+                obj.getChildByName("moreGame").active = true;
+                obj.getChildByName("LookAD").active = false;
                 break
             case Game_Platform.GP_Vivo:
-                obj.getChildByName("ShareGame").active=false;
-                obj.getChildByName("moreGame").active=false;
-                obj.getChildByName("LookAD").active=true;
+                obj.getChildByName("ShareGame").active = false;
+                obj.getChildByName("moreGame").active = false;
+                obj.getChildByName("LookAD").active = true;
                 break;
-                default:
+            case Game_Platform.GP_Tiktok:
+                break;
+            default:
                 break;
         }
     }

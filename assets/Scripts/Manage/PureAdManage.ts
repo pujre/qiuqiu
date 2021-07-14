@@ -6,6 +6,7 @@ import TYQAd from "../tyqsdk/TYQAd";
 import SdkTools, { Game_Platform } from "../tyqsdk/tools/SdkTools";
 import CocosUI from "../tyqsdk/ui/CocosUI";
 import IntersQQ from "../tyqsdk/ads/IntersAd/IntersQQ";
+import IntersTiktok from "../tyqsdk/ads/IntersAd/IntersTiktok";
 
 /**广告管理脚本*/
 const {ccclass, property} = cc._decorator;
@@ -169,6 +170,11 @@ export default class PureAdManage extends cc.Component {
                 break
             case Game_Platform.GP_Oppo:
                 //this.ShowPrimeval();
+                break;
+            case Game_Platform.GP_Tiktok:
+                if (IntersTiktok.getInstance().getSystemIntersFlag()){
+                    IntersTiktok.getInstance().showSystemInters();
+                }
                 break;
         }
 

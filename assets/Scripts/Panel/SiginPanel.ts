@@ -8,6 +8,8 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class SiginPanel extends cc.Component {
+    @property(cc.Node)
+    LookAd:cc.Node=null;
     doe: cc.Node = null;
     Reward: number[] = [100, 0, 200, 300, 500, 500, 1000];//奖励货币的值为
     pos:cc.Vec2=cc.v2(0,0);
@@ -25,6 +27,17 @@ export default class SiginPanel extends cc.Component {
             if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()==Game_Platform.GP_QQ){
                 Btns[i].node.active=false;
             }
+        }
+        switch (SdkTools.getPlatform()) {
+            case Game_Platform.GP_QQ:
+                break
+            case Game_Platform.GP_Vivo:
+                this.LookAd.active=true;
+                break;
+            case Game_Platform.GP_Tiktok:
+                break;
+            default:
+                break;
         }
     }
 

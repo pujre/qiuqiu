@@ -114,7 +114,7 @@ class BannerController {
                 BannerVivo.getInstance().createSystemBanner("2cc6af26a2fb4fe7ab40f81ed346d3de");
                 break;
             case Game_Platform.GP_Tiktok:
-                //BannerTiktok.getInstance().createSystemBanner(this.ID_BannerId);
+                BannerTiktok.getInstance().createSystemBanner('8h9f9732722dia01o4');
                 break;
             case Game_Platform.GP_QQ:
                 //BannerQQ.getInstance().createSystemBanner(this.ID_BannerId);

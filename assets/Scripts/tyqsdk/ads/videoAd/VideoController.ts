@@ -53,7 +53,7 @@ class VideoController {
                 VideoVivo.getInstance().createVideoAd("7c460fa6046545b6a32b219b3126572e");
                 break;
             case Game_Platform.GP_Tiktok:
-                //VideoTiktok.getInstance().createVideoAd(this.ID_VideoID);
+                VideoTiktok.getInstance().createVideoAd('6j608aj423ee2dh85a');
                 break;
             case Game_Platform.GP_QQ:
                 VideoQQ.getInstance().createVideoAd("1eece0677401c146c4af18d9764f296f");

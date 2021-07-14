@@ -147,7 +147,7 @@ class IntersController {
                 IntersVivo.getInstance().createSystemInters("e5076b3c3ec545408107620aefb95777");
                 break;
             case Game_Platform.GP_Tiktok:
-                //IntersTiktok.getInstance().createSystemInters(this.ID_SystemIntersId);
+                IntersTiktok.getInstance().createSystemInters('n9e5p82e5fja7r88k4');
                 break;
             case Game_Platform.GP_QQ:
                 //IntersQQ.getInstance().createSystemInters(this.ID_SystemIntersId);

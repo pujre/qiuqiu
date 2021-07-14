@@ -6,6 +6,8 @@ import OtherFunctions from "../../tools/OtherFunctions";
 class IntersTiktok {
   private static instance: IntersTiktok
 
+  ID_SystemIntersId;
+
   /**
    * 插屏是否在展示中
   */
@@ -47,7 +49,7 @@ class IntersTiktok {
   public createSystemInters(INTER_ID) {
 
     console.log('TYQSDK', 'Tiktok 插屏广告初始化', INTER_ID);
-
+    this.ID_SystemIntersId=INTER_ID;
     let appName = tt.getSystemInfoSync().appName;
     if (appName == "Toutiao" || (appName == "Douyin" && !SdkTools.getInstance().isversionNewThanEngineVersion("1.71"))) {
       this.systemIntersAd = tt.createInterstitialAd({
@@ -80,7 +82,7 @@ class IntersTiktok {
     this.systemIntersAd.onClose(() => {
       console.log('TYQSDK', 'Tiktok 关闭插屏,重新创建插屏广告');
       self.systemIntersAd.destroy();
-      self.createSystemInters(IntersController.getInstance().ID_SystemIntersId);
+      self.createSystemInters(this.ID_SystemIntersId);
       self.isLoadSystemInter = false;
       self.systemIntersAd.load();
     });
