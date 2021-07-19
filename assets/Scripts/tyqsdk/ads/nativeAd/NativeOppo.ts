@@ -100,8 +100,8 @@ class NativeOppo {
       desc: null,
       Native_icon: null,
       Native_BigImage: null,
-      NativeAdTip: "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeIconRes/ICONAd.png",
-      NativeClose: "https://tencentcnd.minigame.xplaymobile.com/Other/SDK/SDKImage_3_0/NativeBannerRes/nativeBannerClose.png",
+      NativeAdTip: "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/ICONAd.png",
+      NativeClose: "https://h5-1258069360.cos.ap-guangzhou.myqcloud.com/other/sdk/NativeAD/nativeBannerClose.png",
     }
 
     var self = this;

@@ -6,6 +6,7 @@ import TYQAd from "../tyqsdk/TYQAd";
 import SdkTools, { Game_Platform } from "../tyqsdk/tools/SdkTools";
 import CocosUI from "../tyqsdk/ui/CocosUI";
 import IntersQQ from "../tyqsdk/ads/IntersAd/IntersQQ";
+import IntersTiktok from "../tyqsdk/ads/IntersAd/IntersTiktok";
 import NativeController from "../tyqsdk/ads/nativeAd/NativeController";
 
 /**广告管理脚本*/
@@ -39,6 +40,7 @@ export default class PureAdManage extends cc.Component {
         })
         switch (SdkTools.getPlatform()) {
             case Game_Platform.GP_Vivo:
+            case Game_Platform.GP_Oppo:
                 this.ADicon()
                 break
         }
@@ -167,6 +169,14 @@ export default class PureAdManage extends cc.Component {
                     TYQAd.getInstance().showInters();
                 }else{
                     NativeController.getInstance().showNativeInters();
+                }
+                break
+            case Game_Platform.GP_Oppo:
+                //this.ShowPrimeval();
+                break;
+            case Game_Platform.GP_Tiktok:
+                if (IntersTiktok.getInstance().getSystemIntersFlag()){
+                    IntersTiktok.getInstance().showSystemInters();
                 }
                 break;
         }
