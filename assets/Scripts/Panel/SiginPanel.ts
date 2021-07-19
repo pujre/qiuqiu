@@ -24,20 +24,10 @@ export default class SiginPanel extends cc.Component {
             clickEventHandler.handler = "OnClick";//这是注册得方法
             clickEventHandler.customEventData = Btns[i].node.name;
             Btns[i].clickEvents.push(clickEventHandler);
-            if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()==Game_Platform.GP_QQ){
-                Btns[i].node.active=false;
+            if(Btns[i].node.name=='LookAD'){
+                let ojbk=SdkTools.getPlatform()==Game_Platform.GP_QQ;
+                Btns[i].node.active=ojbk;
             }
-        }
-        switch (SdkTools.getPlatform()) {
-            case Game_Platform.GP_QQ:
-                break
-            case Game_Platform.GP_Vivo:
-                this.LookAd.active=true;
-                break;
-            case Game_Platform.GP_Tiktok:
-                break;
-            default:
-                break;
         }
     }
 

@@ -71,8 +71,13 @@ export default class GamePanel extends cc.Component {
             if(Btns[i].node.name=='reference1'){
                 this.reference1Btn=Btns[i].node;
             }
-            if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()!=Game_Platform.GP_Vivo){
-                Btns[i].node.active=false;
+            if(Btns[i].node.name=='LookAD'){
+                let blop=SdkTools.getPlatform()==Game_Platform.GP_Vivo;
+                Btns[i].node.active=blop;
+            }
+            if(Btns[i].node.name=='ShareGame'){
+                let qqs=SdkTools.getPlatform()==Game_Platform.GP_QQ;
+                Btns[i].node.active=qqs;
             }
             if(Btns[i].node.name=='Dit'){
                 this.dit=Btns[i].node;

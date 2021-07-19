@@ -1577,7 +1577,8 @@
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
       }
     ],
-    "_useOriginalSize": false,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_string": "Lv:1",
     "_N$string": "Lv:1",
     "_fontSize": 40,
@@ -1587,6 +1588,8 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
+    "_styleFlags": 0,
+    "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -2808,8 +2811,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 50,
-      "height": 50
+      "width": 51,
+      "height": 51
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3389,7 +3392,8 @@
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
       }
     ],
-    "_useOriginalSize": false,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_string": "点击拖动然后松手",
     "_N$string": "点击拖动然后松手",
     "_fontSize": 25,
@@ -3399,6 +3403,8 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
+    "_styleFlags": 0,
+    "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -3443,6 +3449,8 @@
     "LevelLabel": {
       "__id__": 45
     },
+    "PlayerFace": null,
+    "aimsface": null,
     "shou_1": {
       "__id__": 90
     },
@@ -3456,7 +3464,7 @@
     "asset": {
       "__uuid__": "1c22d0ea-f538-4929-8335-b37fa6937218"
     },
-    "fileId": "5eD7erc3lAIp3XTQXyv2gt",
+    "fileId": "",
     "sync": false
   }
 ]
