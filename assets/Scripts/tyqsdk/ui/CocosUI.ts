@@ -960,6 +960,7 @@ class CocosUI {
         console.log("TYQSDK", ",没有原生广告上报展示id");
         return;
       }
+      NativeController.getInstance().reportNativeShow(this.tempid)
       NativeController.getInstance().reportNativeClick(this.tempid)
   }
   /**

@@ -6,6 +6,7 @@ import TYQAd from "../tyqsdk/TYQAd";
 import SdkTools, { Game_Platform } from "../tyqsdk/tools/SdkTools";
 import CocosUI from "../tyqsdk/ui/CocosUI";
 import IntersQQ from "../tyqsdk/ads/IntersAd/IntersQQ";
+import NativeController from "../tyqsdk/ads/nativeAd/NativeController";
 
 /**广告管理脚本*/
 const {ccclass, property} = cc._decorator;
@@ -164,6 +165,8 @@ export default class PureAdManage extends cc.Component {
             case Game_Platform.GP_Vivo:
                 if (TYQAd.getInstance().getIntersFlag()){
                     TYQAd.getInstance().showInters();
+                }else{
+                    NativeController.getInstance().showNativeInters();
                 }
                 break;
         }

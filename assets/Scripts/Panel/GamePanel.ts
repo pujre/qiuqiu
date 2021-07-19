@@ -404,9 +404,9 @@ export default class GamePanel extends cc.Component {
 
     GameOver(isOn:boolean){
         EventCenter.getInst().fire(EventHead.GameOver);
-        if(this.NowLevelId!=1){
+        //if(this.NowLevelId!=1){
             this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },1)  
-        }
+        //}
         PureAdManage.getIns().ShowBlockad();
         PureAdManage.getIns().ShowBanner();
         let Overs:cc.Node=this.node.getChildByName('Overs');

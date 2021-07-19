@@ -137,7 +137,8 @@ export default class DataManage extends cc.Component {
 
     /**获取指定关卡是否解锁 */
     GetLevelisLock(level:number):boolean{
-        return this.GetItemDataNum(DataKey.UnLockLevel+level)==null?false:true;
+        //return this.GetItemDataNum(DataKey.UnLockLevel+level)==null?false:true;
+        return true;
     }
     /**设置指定关卡为解锁 */
     SetLevelLock(level:number){
