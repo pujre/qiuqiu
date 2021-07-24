@@ -427,6 +427,14 @@ export default class GamePanel extends cc.Component {
         //}
         PureAdManage.getIns().ShowBlockad();
         PureAdManage.getIns().ShowBanner();
+        if(this.NowLevelId==3&&DataManage.getIns().GetItemData("isDit")==null){
+            PureAdManage.getIns().showDit((isOn)=>{
+                if(isOn){
+                    this.dit.active=false;
+                    DataManage.getIns().SetItemData("isDit",1);
+                }
+            });
+        }
         let Overs:cc.Node=this.node.getChildByName('Overs');
         let Win:cc.Node=Overs.getChildByName('Win');
         let Lose:cc.Node=Overs.getChildByName('Lose');
