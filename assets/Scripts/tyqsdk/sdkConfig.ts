@@ -22,6 +22,7 @@ class sdkConfig {
     //public channelId: string = '123410889';//vivo
     //public channelId: string = '123414289';//oppo
     public channelId: string = '123415489';//tiktok
+    //public channelId: string = '0';//tiktok
 
 }
 
