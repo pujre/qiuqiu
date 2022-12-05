@@ -15,6 +15,7 @@ export enum Game_Platform {
     GP_HW,     //华为
     GP_XM,     //小米
     GP_BL,     //哔哩哔哩
+    GP_BD,     //百度
 }
 
 class SystemInfo {
@@ -106,6 +107,8 @@ class SdkTools {
         else if (channelId == '165') {
             return Game_Platform.GP_BL;
         }
+        else if(channelId=='188')
+        return Game_Platform.GP_BD;
         else {
             return Game_Platform.GP_Test;
         }
