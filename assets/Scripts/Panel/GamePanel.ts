@@ -71,8 +71,13 @@ export default class GamePanel extends cc.Component {
             if(Btns[i].node.name=='reference1'){
                 this.reference1Btn=Btns[i].node;
             }
-            if(Btns[i].node.name=='LookAD'&&SdkTools.getPlatform()!=Game_Platform.GP_Vivo){
-                Btns[i].node.active=false;
+            if(Btns[i].node.name=='LookAD'){
+                let blop=SdkTools.getPlatform()==Game_Platform.GP_Vivo;
+                Btns[i].node.active=blop;
+            }
+            if(Btns[i].node.name=='ShareGame'){
+                let qqs=SdkTools.getPlatform()==Game_Platform.GP_QQ;
+                Btns[i].node.active=qqs;
             }
             if(Btns[i].node.name=='Dit'){
                 this.dit=Btns[i].node;
@@ -417,11 +422,19 @@ export default class GamePanel extends cc.Component {
 
     GameOver(isOn:boolean){
         EventCenter.getInst().fire(EventHead.GameOver);
-        if(this.NowLevelId!=1){
+        //if(this.NowLevelId!=1){
             this.scheduleOnce(()=>{ PureAdManage.getIns().ShowInters(); },1)  
-        }
+        //}
         PureAdManage.getIns().ShowBlockad();
         PureAdManage.getIns().ShowBanner();
+        if(this.NowLevelId==3&&DataManage.getIns().GetItemData("isDit")==null){
+            PureAdManage.getIns().showDit((isOn)=>{
+                if(isOn){
+                    this.dit.active=false;
+                    DataManage.getIns().SetItemData("isDit",1);
+                }
+            });
+        }
         let Overs:cc.Node=this.node.getChildByName('Overs');
         let Win:cc.Node=Overs.getChildByName('Win');
         let Lose:cc.Node=Overs.getChildByName('Lose');

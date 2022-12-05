@@ -102,13 +102,9 @@ export default class StorePanel extends cc.Component {
                 }
                 break;
             case 'skin_watch_videos':
-                PureAdManage.getIns().ShowVideo((isOn)=>{
-                    if(isOn){
-                        DataManage.getIns().SetCoin(300);
-                        UIManage.getIns().ShowTip('获得300金币');
-                    }else{
-                        UIManage.getIns().ShowTip('取消了广告');
-                    }
+                PureAdManage.getIns().ShowVideo(()=>{
+                    DataManage.getIns().SetCoin(300);
+                    UIManage.getIns().ShowTip('获得300金币');
                 })
                 break;
             case '':

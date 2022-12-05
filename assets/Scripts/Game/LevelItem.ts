@@ -72,7 +72,8 @@ export default class LevelItem extends cc.Component {
 
     UIUpdate(){
         var er=this.node.getChildByName('Level_'+this.LevelId.toString())
-        //cc.log(this.LevelId,DataManage.getIns().GetLevelisLock(this.LevelId));
+       
+        if(er==null){ cc.log(this.LevelId.toString()); return};
         if(DataManage.getIns().GetLevelisLock(this.LevelId)){
             for (let i = 0; i < er.children.length; i++) {
                 const element = er.children[i];

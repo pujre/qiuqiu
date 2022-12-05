@@ -19,7 +19,7 @@ class NativeController {
     /**
      * 原生广告刷新时间
     */
-    public NUM_NativeUpdateTime = 30;
+    public NUM_NativeUpdateTime = 120;
 
     /**
      * 原生ICON正在展示中
@@ -341,6 +341,25 @@ class NativeController {
     }
 
     /**
+     * 立刻刷新原生广告
+     */
+    private updateNativeAdNow(){
+        switch (SdkTools.getPlatform()) {
+            case Game_Platform.GP_Oppo:
+                NativeOppo.getInstance().nativeUpdate();
+                break;
+            case Game_Platform.GP_Vivo:
+                NativeVivo.getInstance().nativeUpdate();
+                break;
+            // case Game_Platform.GP_HW:
+            //     NativeHW.getInstance().nativeUpdate();
+            //     break;
+            default:
+                break;
+        }
+    }
+
+    /**
      * 展示原生Banner
      */
     public showNativeBanner() {
@@ -437,6 +456,7 @@ class NativeController {
             default:
                 break;
         }
+        this.updateNativeAdNow();
     }
 
     /**
